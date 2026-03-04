@@ -1,0 +1,63 @@
+#Bootstrap-media-queries-memo {
+    /* See also vendor-extensions/_custom.scss */
+
+    $grid-breakpoints: (
+        // min-width
+        xs: 0,
+        // col
+        sm: 576px,
+        // col-sm
+        md: 768px,
+        // col-md
+        lg: 992px,
+        // col-lg
+        xl: 1200px,
+        // col-xl
+        xxl: 1600px // col-xxl
+    );
+
+    /* min-width: ; */
+    @include media-breakpoint-up(xxl) {
+        // min-width: 1600px;
+        min-width: 1600px; // .col-xxl
+    }
+    @include media-breakpoint-up(xl) {
+        // min-width: 1200px;
+        min-width: 1200px; // .col-xl
+    }
+    @include media-breakpoint-up(lg) {
+        // min-width: 992px;
+        min-width: 992px; // .col-lg
+    }
+    @include media-breakpoint-up(md) {
+        // min-width: 768px;
+        min-width: 768px; // .col-md
+    }
+    @include media-breakpoint-up(sm) {
+        // min-width: 576px;
+        min-width: 576px; // .col-sm
+    }
+
+    @media screen and (min-width: 400px) {
+    }
+
+    /* max-width: ; */
+    @include media-breakpoint-down(xxl) /* max-width: 1599px; */ {
+        background-color: rgb(255, 176, 127);
+    }
+    @include media-breakpoint-down(xl) /* max-width: 1199px; */ {
+        background-color: aquamarine;
+    }
+    @include media-breakpoint-down(lg) /* max-width: 991px; */ {
+        background-color: rgb(5, 130, 88);
+    }
+    @include media-breakpoint-down(md) /* max-width: 767px; */ {
+        background-color: rgb(189, 255, 127);
+    }
+    @include media-breakpoint-down(sm) /* max-width: 575px; */ {
+        background-color: rgb(246, 255, 127);
+    }
+
+    @media screen and (max-width: 400px) {
+    }
+}

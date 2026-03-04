@@ -1,0 +1,42 @@
+.button,
+button {
+    display: inline-block;
+    padding: 0.5rem 3rem;
+    border-radius: 0rem; // square
+    color: black;
+    transition: all 0.25s ease-in-out;
+    text-decoration: none;
+    position: relative;
+    border: solid 0.3rem black;
+    width: fit-content;
+
+    &.round {
+        border-radius: 999px;
+    }
+
+    &:hover {
+        color: black;
+        background-color: rgb(200, 200, 200);
+        text-decoration: none;
+        transition: all 0.25s ease-in-out;
+    }
+}
+
+.wpcf7-submit {
+    display: inline-block;
+    padding: 1.3rem 3rem;
+    border-radius: 0rem;
+    @include font(gothic, 2rem, 600, 1, $black);
+    transition: all 0.25s ease-in-out;
+    text-decoration: none;
+    position: relative;
+    border: solid 0.3rem $black;
+    background-color: white;
+
+    &:hover {
+        background-color: $black;
+
+        color: $white;
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,58 @@
+/* Desktop rules: min-width 992px */
+#header {
+    width: 100%;
+    display: block;
+    padding: 3rem 0;
+    position: relative;
+    z-index: 10000;
+
+    .container.content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        // Logo
+        a.logo {
+            width: 14rem;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        // Navbar
+        .nav-closed /* nav */ {
+            a.logo-mobile {
+                display: none;
+            }
+
+            .menu {
+                ul {
+                    display: flex;
+                    align-items: center;
+                    list-style-type: none;
+
+                    .page_item /* li */ {
+                        display: inline-block;
+                        margin: 0 2rem 0 1rem;
+
+                        a {
+                            position: relative;
+
+                            &:hover,
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+                    }
+                }
+            } // END .menu
+        } // END .nav-closed
+
+        // Mobile menu button
+        .mobile-nav-button {
+            display: none;
+        }
+    } // END .content.container
+} // END #header

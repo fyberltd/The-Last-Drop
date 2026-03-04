@@ -1,0 +1,186 @@
+[
+    {
+        "key": "group_64ad697020460",
+        "title": "Page Layout",
+        "fields": [
+            {
+                "key": "field_64ad6970ff63b",
+                "label": "layout",
+                "name": "layout",
+                "aria-label": "",
+                "type": "flexible_content",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layouts": {
+                    "layout_64ad791b7e9a1": {
+                        "key": "layout_64ad791b7e9a1",
+                        "name": "layout1",
+                        "label": "layout1",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_64ba9258f0d32",
+                                "label": "readonly_if_non_admin",
+                                "name": "readonly_if_non_admin",
+                                "aria-label": "",
+                                "type": "true_false",
+                                "instructions": "Check this box to make this field readonly for non-admin users.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "message": "",
+                                "default_value": 0,
+                                "ui": 0,
+                                "ui_on_text": "",
+                                "ui_off_text": ""
+                            },
+                            {
+                                "key": "field_64ad795089b23",
+                                "label": "text1",
+                                "name": "text1",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "layout1 - text1 content",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_64ae70d7dde44",
+                                "label": "text2",
+                                "name": "text2",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "layout1 - text2 content",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": ""
+                            }
+                        ],
+                        "min": "",
+                        "max": "2"
+                    },
+                    "layout_64ad796fbe575": {
+                        "key": "layout_64ad796fbe575",
+                        "name": "layout2",
+                        "label": "layout2",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_64ba929283920",
+                                "label": "readonly_if_non_admin",
+                                "name": "readonly_if_non_admin",
+                                "aria-label": "",
+                                "type": "true_false",
+                                "instructions": "Check this box to make this field readonly for non-admin users.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "message": "",
+                                "default_value": 0,
+                                "ui": 0,
+                                "ui_on_text": "",
+                                "ui_off_text": ""
+                            },
+                            {
+                                "key": "field_64ad798abe577",
+                                "label": "text1",
+                                "name": "text1",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "layout2 - text1 content",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_64ae7132a5579",
+                                "label": "text2",
+                                "name": "text2",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "layout2 - text2 content",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": ""
+                            }
+                        ],
+                        "min": "",
+                        "max": "4"
+                    }
+                },
+                "min": "",
+                "max": "",
+                "button_label": "Add Row"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "Custom-Template.php"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]

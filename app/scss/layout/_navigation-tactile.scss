@@ -1,0 +1,124 @@
+/* Mobile menu rules: max-width 991px */
+#header.tactile {
+    opacity: 1;
+
+    .container.content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+
+        a.logo {
+            width: 40%;
+            z-index: 99;
+
+            img {
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        nav.nav-closed {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            background-color: $white;
+            width: 100%;
+            height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 5rem;
+
+            transition: all 0.3s ease-in-out;
+            padding-top: 5rem;
+            z-index: 10;
+            overflow: hidden;
+            z-index: 999;
+
+            &.open {
+                right: 0;
+            }
+
+            a.logo-mobile {
+                display: block;
+                width: 50vmin;
+                min-width: 20rem;
+                aspect-ratio: 75/10;
+                margin-top: 10vh;
+                margin-bottom: 5vh;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            .menu {
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 3rem;
+
+                    li {
+                        width: fit-content;
+
+                        a {
+                            font-size: $fontsize3;
+                            font-weight: 500;
+                            text-align: center;
+                        }
+                    }
+                }
+            } // END .menu
+        } // END nav-closed
+
+        .mobile-nav-button {
+            display: block;
+            position: fixed;
+            bottom: 3rem;
+            right: 3rem;
+            padding: 1.5rem;
+            background-color: $blue;
+            border-radius: 50%;
+            z-index: 999;
+
+            .bar1,
+            .bar2,
+            .bar3 {
+                width: 3rem;
+                height: 0.3rem;
+                background-color: $white;
+                margin: 0.5rem 0;
+                -webkit-transition: 0.4s;
+                -o-transition: 0.4s;
+                transition: 0.4s;
+                z-index: 7;
+            }
+
+            .bar1 {
+                &.change {
+                    background-color: $white;
+                    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+                    transform: rotate(-45deg) translate(-6px, 6px);
+                }
+            }
+            .bar2 {
+                &.change {
+                    background-color: $white;
+                    opacity: 0;
+                }
+            }
+            .bar3 {
+                &.change {
+                    background-color: $white;
+                    -webkit-transform: rotate(45deg) translate(-6px, -6px);
+                    transform: rotate(45deg) translate(-6px, -6px);
+                }
+            }
+        }
+    } // END .container.content
+} // END #header
