@@ -1,126 +1,175 @@
-#header {
-	background-color: $blue;
-	width: 100%;
-	display: block;
-	padding: 2rem 0;
-	position: fixed;
-	z-index: 10;
-}
-
-/* Hide IE banner by default */
-.ie-notice {
-	display: none;
-
-	.flex-center {
-		display: flex;
-		align-items: center;
+@keyframes slideDown {
+	from {
+		transform: translateY(-100%);
 	}
 
-	#contact-info {
-		padding: 6rem;
+	to {
+		transform: translateY(0);
+	}
+}
 
-		@include media-breakpoint-down(md) {
-			width: 80%;
-			margin-bottom: 4rem;
+.top-bar {
+	background-color: #033421;
+	padding: 1.6rem 0;
+	color: #fff;
+	transition: background-color 0.3s ease, padding 0.3s ease;
+
+	&.sticky {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 1000;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+		padding: 1.6rem 0;
+		animation: slideDown 0.3s ease-out;
+		z-index: 100001;
+
+	}
+
+	.top-bar-text {
+		.laima-font {
+			font-family: "laima", serif;
+			font-size: 2.8rem;
+			margin-right: 2rem;
+			vertical-align: middle;
 		}
 
-		img {
-			margin-bottom: 4rem;
-		}
+		.sub-text {
+			font-size: 1.4rem;
+			font-family: 'Lexend';
+			color: #ebe9df;
 
-		h2 {
-			margin-bottom: 2rem;
-		}
-
-		address {
-			margin-bottom: 4rem;
-		}
-
-		li {
-			list-style-type: none;
-		}
-
-		.social_media {
-			margin-top: 4rem;
-			display: flex;
-			justify-content: flex-start;
-			left: -1rem;
-			position: relative;
-
-			a {
-				display: inline-block;
-				margin-right: 1rem;
-				transition: all 0.3s ease-in-out;
-				height: 4rem;
-				width: 4rem;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-
-				&:hover {
-					box-shadow: 0 0 10px $orange;
-
-					border-radius: 2rem;
-				}
-
-				&:last-of-type {
-					svg {
-						margin-right: 0;
-					}
-				}
-
-				svg {
-					width: 3rem;
-					height: auto;
-
-					path {
-						fill: $orange;
-					}
-
-					circle {
-						fill: $orange;
-					}
-				}
+			@include media-breakpoint-down(sm) {
+				display: none;
 			}
 		}
 	}
 
-	#contact-form-wrap {
-		padding: 6rem;
-
-		@include media-breakpoint-down(md) {
-			width: 100%;
-		}
-
-		h2 {
-			@include font(gothic, 2.2rem, 600, 1.2, $darkBlue);
-			margin-bottom: 2rem;
-		}
-	}
-} // END IE notice
-
-/* Show IE banner on IE10/11 */
-@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
-	body {
-		overflow: hidden;
-	}
-
-	.ie-notice {
+	.btn-gold {
+		padding: 0.5rem 2.5rem;
+		font-size: 1.4rem;
 		display: flex;
-		position: fixed;
-		top: 0;
-		left: 0;
-		height: 100%;
-		width: 100%;
-		justify-content: center;
+		gap: 0.5rem;
+		min-width: 165px;
+		display: flex;
 		align-items: center;
-		z-index: 10000;
-		background-color: white;
-		overflow-y: scroll;
-		flex-wrap: wrap;
+		justify-content: center;
 
-		.container {
-			margin: 0;
+		img {
+			width: 20px;
+			height: auto;
+		}
+	}
+}
+
+#header {
+	background-color: transparent;
+	width: 100%;
+	display: block;
+	padding: 2rem 0;
+	position: absolute;
+	top: 63px;
+	z-index: 10;
+
+	.logo {
+		img {
+			// max-width: 180px;
+		}
+	}
+
+	nav {
+		display: flex;
+		align-items: center;
+
+		#header_nav {
+			ul {
+				margin: 0;
+				padding: 0;
+				display: flex;
+				list-style: none;
+
+				li {
+					margin: 0 1.5rem;
+
+					a {
+						color: #ebe9df;
+						text-decoration: none;
+						font-size: 1.6rem;
+						font-weight: 400;
+
+						&:hover {
+							color: #B17C2B;
+						}
+					}
+				}
+			}
+		}
+
+		.header-reservatio-item {
+			color: #ebe9df;
+			text-decoration: none;
+			font-size: 1.6rem;
+			font-weight: 400;
+			margin-left: 1.5rem;
+
+			&:hover {
+				color: #B17C2B;
+			}
+		}
+
+		.header-actions {
+			display: flex;
+			align-items: center;
+			margin-left: 3rem;
+			gap: 2rem;
+
+			.header-icons {
+				display: flex;
+				gap: 0.5rem;
+				align-items: center;
+
+				a {
+					display: block;
+					width: 24px;
+
+					&:hover {
+						img {
+							filter: brightness(0) saturate(100%) invert(51%) sepia(32%) saturate(1186%) hue-rotate(7deg) brightness(95%) contrast(89%);
+						}
+					}
+
+					img {
+						width: 100%;
+						height: auto;
+						display: block;
+						filter: brightness(0) invert(1);
+					}
+
+					svg {
+						width: 100%;
+						height: auto;
+						display: block;
+						filter: brightness(0) invert(1);
+					}
+				}
+			}
+
+			.header-buttons {
+				display: flex;
+				align-items: center;
+				gap: 1.2rem;
+
+				.btn {
+					padding: 0.7rem 2rem;
+					font-size: 1.3rem;
+					white-space: nowrap;
+				}
+
+				a.btn-outline-gold {
+					color: #fff;
+				}
+			}
 		}
 	}
 }

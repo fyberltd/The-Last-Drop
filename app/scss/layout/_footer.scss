@@ -1,225 +1,300 @@
 #footer {
-	background-color: $darkBlue;
+	background-color: #052C1B;
 	width: 100%;
 	display: block;
-	overflow: hidden;
+	color: $white;
+	padding: 8rem 0 4rem;
 
-	@include media-breakpoint-down(lg) {
-		padding-bottom: 3rem;
+	p {
+		color: #EBE9DF;
+		font-weight: 300;
 	}
 
 	.logo_section {
-		position: relative;
-		border-bottom: 0.1rem solid #fff;
+		margin-bottom: 6rem;
 
-		.container {
-			position: relative;
-			padding-top: 4rem;
-			padding-bottom: 4rem;
+		.logo {
+			display: inline-block;
+			width: 20rem;
 
-			.logo {
-				display: inline-block;
-				width: 16rem;
-
-				img {
-					width: 100%;
-					height: auto;
-				}
-			}
-
-			.color_bar {
-				position: absolute;
-				top: 0;
-				left: 15rem;
-				height: 100%;
-				opacity: .1;
-
-				@include media-breakpoint-down(lg) {
-					left: unset;
-				}
-
-				svg {
-					height: 100%;
-					flex-grow: unset;
-
-				}
+			img {
+				width: 100%;
+				height: auto;
 			}
 		}
 	}
 
-	.footer_info {
+	.email_marketing_section {
+		margin-bottom: 8rem;
 
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		padding-top: 4rem;
-		padding-bottom: 4rem;
-
-		// @include media-breakpoint-down(lg) {
-		// 	flex-direction: column;
-		// 	align-items: center;
-		// }
-
-		address {
-			color: $white;
-			margin-bottom: 0;
-
-			@include media-breakpoint-down(lg) {
-				width: 49%;
-				padding-bottom: 4rem;
-			}
-
-			@include media-breakpoint-down(md) {
-				width: 100%;
-			}
-
-			span {
-				font-weight: 600;
-				color: $orange;
-			}
+		h2 {
+			color: $gold;
+			font-size: 2rem;
+			margin-bottom: 2.5rem;
+			font-weight: 500;
+			font-family: 'Lexend';
 		}
 
-		.contact {
-			list-style-type: none;
+		.description {
+			line-height: 1.6;
+			margin-bottom: 3rem;
+			max-width: 45rem;
+			font-size: 1.4rem;
+			font-weight: 300;
+			color: #EBE9DF;
+		}
 
-			@include media-breakpoint-down(lg) {
-				width: 49%;
-			}
+		.privacy_hint {
+			font-size: 1.2rem;
+			opacity: 1;
+			color: #EBE9DF;
+		}
 
-			@include media-breakpoint-down(md) {
-				width: 100%;
-				margin-bottom: 4rem;
+		.footer-menu {
+			h5 {
+				color: #b17c2b;
+				font-family: 'Lexend';
+				font-size: 2rem;
+				text-transform: uppercase;
 			}
 
 			li {
-				color: $white;
+				a {
+					color: #ebe9df;
+					font-family: 'Lexend';
+					font-size: 1.8rem;
+					font-weight: 300;
+					text-decoration: none;
 
-				&:nth-of-type(3) {
-					color: $orange;
-					font-weight: 600;
-					margin-top: 4rem;
+					&:hover {
+						color: #b17c2b;
+					}
 				}
+			}
+		}
+
+		.form_wrap {
+			.newsletter_form {
+				.input_group {
+					display: flex;
+					gap: 1rem;
+
+					p:first-child {
+						width: 100%;
+					}
+
+					p:last-child {
+						margin-top: 0.3rem;
+					}
+
+					input {
+						background: rgba(255, 255, 255, .05);
+						border-radius: 5rem;
+						border: 1px solid rgba(255, 255, 255, .1);
+						flex-grow: 1;
+						color: #EBE9DF;
+						padding: 1.5rem 3rem;
+						font-size: 1.4rem;
+
+						&::placeholder {
+							color: rgba(255, 255, 255, 0.5);
+						}
+
+						&:focus {
+							outline: none;
+						}
+					}
+
+					.submit_btn {
+						background-color: $gold;
+						border: none;
+						width: 5.5rem;
+						height: 5.5rem;
+						border-radius: 50%;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						cursor: pointer;
+						transition: transform 0.3s ease;
+
+						&:hover {
+							transform: scale(1.05);
+						}
+
+						svg {
+							width: 2.2rem;
+							height: 2.2rem;
+
+							path {
+								fill: #052C1B;
+							}
+
+							g {
+								transform: translate(-9, -10) !important;
+							}
+						}
+					}
+				}
+
+				.wpcf7-not-valid-tip {
+					color: $gold;
+					font-size: 1.2rem;
+					margin-top: 1.5rem;
+				}
+			}
+		}
+
+		.wpcf7-response-output {
+			color: $gold;
+			font-size: 1.4rem;
+			margin-top: 1.5rem;
+			font-family: 'Lexend';
+		}
+	}
+
+	.bottom_section {
+		padding-top: 4rem;
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+		.social_contact {
+			.social_links {
+				display: flex;
+				gap: 2rem;
+				margin-bottom: 2rem;
 
 				a {
 					display: inline-block;
-					@include font(inherit, inherit, inherit, inherit, inherit);
-					transition: all 0.3s ease-in-out;
+					color: $gold;
+					transition: color 0.3s ease;
+
+					svg {
+						width: 2.22rem;
+						height: 2.22rem;
+						display: block;
+					}
 
 					&:hover {
-						color: $orange;
-						text-decoration: none;
-					}
-
-					span {
-						color: $orange;
-						font-weight: 600;
+						color: $white;
 					}
 				}
+			}
 
-				&:last-of-type {
+			.contact_info {
+				font-size: 1.2rem;
 
-					a {
-						display: inline-block;
-						margin-right: 1.5rem;
+				p {
+					margin-bottom: 0.5rem;
+					display: flex;
+					font-size: 1.2rem;
+				}
 
-						svg {
-							width: 3rem;
-							height: 3rem;
+				a {
+					color: #ebe9df;
+					text-decoration: none;
+					margin-right: 2rem;
+					font-size: 1.2rem;
 
-							&:hover {
-
-								path,
-								circle {
-									fill: $orange;
-								}
-							}
-
-							path {
-								fill: #ffffff;
-							}
-
-							circle {
-								fill: #ffffff;
-							}
-						}
+					&:hover {
+						color: $gold;
 					}
 				}
 			}
 		}
 
-		nav {
-
-			@include media-breakpoint-down(lg) {
-				width: 29%;
-			}
-
-			@include media-breakpoint-down(md) {
-				width: 100%;
-			}
-
-			ul {
-				list-style-type: none;
-
-				li {
-					color: $white;
-
-					a {
-						transition: all 0.3s ease-in-out;
-
-						&:hover {
-							color: $orange;
-							text-decoration: none;
-						}
-					}
-				}
-			}
-		}
-
-		.mailing {
-			p {
-				color: $white;
-
-				margin-bottom: 1rem;
-			}
-
-			input {
-				background-color: #ffffff;
-				border: 0;
-				border-radius: 0.5rem;
-				color: $darkBlue;
-				padding: 0.5rem 1rem;
-			}
-		}
-
-		.legal {
-			width: 100%;
-			margin-top: 2rem;
-			text-align: right;
-
-			@include media-breakpoint-down(md) {
-				text-align: center;
-			}
-
-			p,
-			a {
-				display: inline-block;
-				font-size: $fontsize5;
-				color: $white;
-			}
+		.legal_links {
+			display: flex;
+			justify-content: center;
+			gap: 3rem;
 
 			a {
-				transition: all 0.3s ease-in-out;
+				font-size: 1.2rem;
+				text-decoration: none;
+				border-bottom: 1px solid transparent;
+				color: #EBE9DF;
 
 				&:hover {
-					color: $orange;
-					text-decoration: none;
+					border-bottom-color: #EBE9DF;
+				}
+			}
+		}
+
+		.copyright_credit {
+			font-size: 1.2rem;
+
+			p {
+				margin-bottom: 0.5rem;
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(lg) {
+	#footer {
+		padding: 6rem 3rem;
+
+		.email_marketing_section {
+			h2 {
+				font-size: 2.8rem;
+			}
+
+			.footer-menu {
+				margin-bottom: 3rem;
+			}
+		}
+
+		.bottom_section {
+			text-align: center;
+
+			.social_contact {
+				.social_links {
+					justify-content: center;
 				}
 			}
 
-			span {
+			.legal_links {
+				margin: 3rem 0;
+			}
 
-				font-size: $fontsize5;
-				color: white;
+			.text-right {
+				text-align: center !important;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 540px) {
+	#footer {
+		.container {
+			width: 100%;
+		}
+
+		.email_marketing_section {
+			margin-bottom: 2rem;
+
+			h2 {
+				font-size: 1.8rem;
+			}
+		}
+
+		.bottom_section {
+			.social_contact {
+				.social_links {
+					justify-content: flex-start;
+				}
+
+				.legal_links {
+					margin: 1rem 0;
+					justify-content: flex-start;
+
+					a {
+						text-decoration: underline;
+					}
+				}
+
+				.copyright_credit {
+					text-align: left;
+				}
 			}
 		}
 	}

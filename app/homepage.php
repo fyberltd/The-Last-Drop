@@ -1,203 +1,108 @@
 <?php
 /*template name: homepage*/
 ?>
-
-<?php
-get_header();
-?>
-
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+<head>
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><?php wp_title(); ?></title>
+    <?php wp_head(); ?>
+</head>
+<body <?php body_class(); ?>>
 <main id="home_page">
-	<?php // blank hero 
-	?>
-	<section id="hero">
-		<div class="container content">
-			<div class="row">
-				<article class="col-lg-6 text">
-					<h1>Fyber V5</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dolor justo, mattis quis urna eu, interdum molestie est.</p>
-					<a href="#" class="button blue">Button</a>
-				</article>
 
-				<div class="col-lg-6">
-					<div class="image"></div>
-				</div>
-			</div>
-		</div>
-	</section>
+    <!-- Background Video -->
+    <video autoplay loop muted playsinline class="bg-video">
+        <source src="<?php echo get_template_directory_uri(); ?>/images/video/background-video.mp4" type="video/mp4">
+    </video>
+    
+    <!-- Overlay -->
+    <div class="bg-overlay"></div>
 
-	<?php // hero with gradient background 
-	?>
-	<section id="hero" class="gradient">
-		<div class="container content">
-			<div class="row">
-				<article class="col-lg-6 text">
-					<h1>hero class='gradient' </h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dolor justo, mattis quis urna eu, interdum molestie est.</p>
-					<a href="#" class="button pink">Button</a>
-				</article>
+    <div class="main-content">
+        <!-- Main State -->
+        <div class="content-state state-main active">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="The Last Drop" class="logo">
+            <h1>OPENING SOON</h1>
+            <a href="#" class="btn-contact" id="open_contact">Contact us</a>
+        </div>
 
-				<div class="col-lg-6">
-					<div class="image"></div>
-				</div>
-			</div>
-		</div>
-	</section>
+        <!-- Contact State -->
+        <div class="content-state state-contact">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/icon.png" alt="Back to Main" class="icon-logo" id="back_to_main" title="Back to Home">
+            <h2>CONTACT US</h2>
+            <?php echo do_shortcode('[contact-form-7 id="31f0a0b" title="Contact form"]'); ?>
+        </div>
+    </div>
 
-	<?php // hero with background image 
-	?>
-	<section id="hero" class="fullbg">
-		<div class="container content">
-			<div class="row">
-				<?php
-				$head = "some text";
-				$args = array(
-					'section_title' => $head,
-					'section_body' => '<p>hero as a template part with variables and full background image</p><p>maybe not worth it.</p>',
-					'url' => '#',
-					'button_text' => 'view more'
-				);
-				get_template_part('z-layout/md-text', 'md-text', $args); // z-layout/file-name.phpf="#" class="button">Button</a>
-				?>
+    <!-- Footer Area -->
+    <div class="landing-footer">
+        
+        <div class="footer-left">
+            <div class="contact-links">
+                <a href="tel:+353214813539">+353 21 4813539</a>
+                <a href="mailto:bookings@thelastdropcobh.com">admin@thelastdropcobh.com</a>
+            </div>
+            <div class="address">
+                The Last Drop, 17 Westbourne Place, Cobh, Co. Cork
+            </div>
+        </div>
 
-				<div class="col-lg-6">
-					<div class="image"></div>
-				</div>
-			</div>
-		</div>
-	</section>
+        <div class="footer-right">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/thelastdropcobh/" aria-label="Instagram" target="_blank">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/cobh2022/posts/the-last-drop-cobh-a-new-bar-restaurant-will-be-opening-in-cobh-shortly-we-hope-/1439992074803797/" aria-label="Facebook" target="_blank">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                </a>
+            </div>
+            <!-- <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookies Policy</a>
+            </div> -->
+            <div class="copyright">
+                Copyright &copy; 2026 The Last Drop Limited. All rights reserved.
+            </div>
+        </div>
 
-	<section id="cards">
-		<div class="container">
-			<h2>cards</h2>
+    </div>
 
-			<div class="card-row">
-				<a href='#' class="basic-card">
-					<div class="image"></div>
-					<h3 class="title">basic-card </h3>
-				</a>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var openBtn = document.getElementById('open_contact');
+        var backBtn = document.getElementById('back_to_main');
+        var stateMain = document.querySelector('.state-main');
+        var stateContact = document.querySelector('.state-contact');
 
-				<a href='#' class="basic-card">
-					<div class="image">
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-alarm" viewBox="0 0 16 16">
-							<path fill-rule="evenodd" d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1h-3zm1.038 3.018a6.093 6.093 0 0 1 .924 0 6 6 0 1 1-.924 0zM8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5zM0 3.5c0 .753.333 1.429.86 1.887A8.035 8.035 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1z" />
-						</svg>
-					</div>
-					<h3 class="title">basic-card with icon</h3>
-				</a>
+        if(openBtn && stateMain && stateContact) {
+            openBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                stateMain.classList.remove('active');
+                stateContact.classList.add('active');
+                window.scrollTo(0, 0); // Scroll to top for mobile
+            });
+        }
 
-				<a href='#' class="basic-card">
-					<div class="image">
-						<p class="hover-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos, dolorum?</p>
-					</div>
-					<h3 class="title">basic-card with hover</h3>
-				</a>
-
-				<a href='#' class="basic-card">
-					<div class="image"></div>
-					<h3 class="title">basic-card</h3>
-				</a>
-			</div>
-
-			<div class="card-row">
-				<a href='#' class="text-card">
-					<div class="image"></div>
-					<div class="text">
-						<h3 class="title">text-card</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, quasi.</p>
-					</div>
-				</a>
-
-				<div href='#' class="text-card">
-					<div class="image"></div>
-					<div class="text">
-						<h3 class="title">text-card</h3>
-						<a href="#" class="button blue rounded">with button</a>
-					</div>
-				</div>
-
-				<a href='#' class="text-card">
-					<div class="image"></div>
-					<div class="text">
-						<h3 class="title">text-card</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, quasi.</p>
-					</div>
-				</a>
-
-				<a href='#' class="text-card">
-					<div class="image"></div>
-					<div class="text">
-						<h3 class="title">text-card</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, quasi.</p>
-					</div>
-				</a>
-			</div>
-		</div>
-	</section>
-
-	<?php // full width 50% 50% article 
-	?>
-	<article class="article">
-		<article class="text-col">
-			<div class="text">
-				<h2>title</h2>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, expedita.</p>
-				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo nihil porro culpa magnam recusandae corrupti quaerat error nam iure dicta.</p>
-				<a href="#" class="button blue">button</a>
-			</div>
-		</article>
-		<div class="image-col"></div>
-	</article>
-
-	<?php // article in a container 
-	?>
-	<article class="container article">
-		<div class="text-col">
-			<article class="text">
-				<h2>title</h2>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, expedita.</p>
-				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo nihil porro culpa magnam recusandae corrupti quaerat error nam iure dicta.</p>
-				<a href="#" class="button blue">button</a>
-			</article>
-		</div>
-		<div class="image-col"></div>
-	</article>
-
-	<div class="call-to-action"></div>
-
-	<?php get_template_part('z-components/recent-posts'); ?>
-
-	<section id="lastest_blog">
-		<?php
-		$args = array(
-			'post_type'			=> 'post',
-			'posts_per_page'	=> 3,
-			'orderby' 			=> 'date'
-		);
-		$query = new WP_Query($args);
-		?>
-		<div class="container">
-			<?php if ($query->have_posts()) : ?>
-				<h2>Recent Posts</h2>
-
-				<div class="row blog_posts card-row">
-					<?php while ($query->have_posts()) : $query->the_post(); ?>
-						<a href='<?php the_permalink(); ?>' class="basic-card">
-							<div class="image" <?php if (get_the_post_thumbnail_url()) : ?>style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);" <?php endif; ?>>
-								<p class="hover-text"><?php echo get_the_excerpt(); ?></p>
-							</div>
-							<h2 class="title"><?php echo get_the_title(); ?></h2>
-						</a>
-					<?php endwhile;
-					wp_reset_postdata(); ?>
-				</div>
-			<?php endif; ?>
-		</div>
-	</section>
-
-	<?php get_template_part('z-components/call-to-action'); ?>
+        if(backBtn && stateMain && stateContact) {
+            backBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                stateContact.classList.remove('active');
+                stateMain.classList.add('active');
+                window.scrollTo(0, 0); // Scroll to top for mobile
+            });
+        }
+    });
+    </script>
 
 </main>
-
-<?php
-get_footer();
-?>
+<?php wp_footer(); ?>
+</body>
+</html>

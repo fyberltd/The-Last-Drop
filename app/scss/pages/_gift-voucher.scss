@@ -1,0 +1,393 @@
+#gift_voucher_page {
+
+    .text-gold {
+        color: #B17C2B !important;
+    }
+
+    .bg-dark-green {
+        background-color: #033421 !important;
+    }
+
+    .border-top-gold {
+        border-top: 1px solid rgba(177, 124, 43, 0.3);
+    }
+
+    .gift-voucher-hero {
+        position: relative;
+        height: 100%;
+        min-height: 420px;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .hero-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: 100%;
+            height: auto;
+            z-index: -2;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: -1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+
+            .hero-title {
+                font-family: "laima", serif;
+                font-size: 60px;
+                margin: 0;
+                line-height: 1.1;
+                text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+                color: #EBE9DF;
+            }
+        }
+    }
+
+    .gift-card {
+        background-color: #EBE9DF;
+        padding: 10rem 0;
+
+        .col-lg-6 {
+            &:first-child {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .img-data {
+            position: relative;
+            min-height: 600px;
+            max-height: 600px;
+            max-width: 90%;
+
+            img {
+                width: 100%;
+                height: 600px;
+                object-fit: contain;
+            }
+
+            .offer {
+                background: #b17c2b;
+                border-radius: 50%;
+                width: 150px;
+                height: 150px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 1.5rem;
+
+                h6 {
+                    font-size: 1.8rem;
+                    color: #ffffff;
+                    text-align: center;
+                    line-height: 24px;
+                    margin: 0;
+                    font-weight: 300;
+                    letter-spacing: 3px;
+
+                    span {
+                        font-size: 3.4rem;
+                        font-weight: 500;
+                    }
+                }
+
+                p {
+                    font-size: 1.4rem;
+                    color: #ffffff;
+                    text-align: center;
+                    margin: 0;
+                }
+            }
+        }
+
+        p {
+            font-size: 1.6rem;
+            line-height: normal;
+            font-weight: 300;
+        }
+
+        p.text-bold {
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+
+        // FORM STYLES 
+
+        .gift-voucher-form-wrap {
+            width: 100%;
+        }
+
+        .gift-voucher-form {
+            width: 100%;
+        }
+
+        .section-label,
+        .addressee-title {
+            font-family: 'Lexend';
+            font-size: 18px;
+            font-weight: 500;
+            color: #26241A;
+            margin: 0 0 16px;
+        }
+
+        .voucher-amount-block {
+            margin-bottom: 28px;
+        }
+
+        .voucher-amount-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 14px;
+        }
+
+        .voucher-select-group,
+        .voucher-custom-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .field-helper {
+            font-size: 12px;
+            line-height: 1.4;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .voucher-select {
+            min-width: 155px;
+            height: 42px;
+            padding: 0 16px;
+            border: none;
+            border-radius: 999px;
+            background: #E3E1D5;
+            color: #333;
+            font-size: 15px;
+            outline: none;
+            appearance: none;
+            cursor: pointer;
+        }
+
+        .voucher-custom-input {
+            width: 110px;
+            height: 42px;
+            padding: 0 16px;
+            border: none;
+            border-radius: 999px;
+            background: #E3E1D5;
+            color: #333;
+            font-size: 15px;
+            outline: none;
+            margin-top: 2.2rem;
+        }
+
+        .voucher-custom-input::placeholder {
+            color: #b5b0a5;
+        }
+
+        .voucher-or-text {
+            font-size: 12px;
+            color: #555;
+            margin-top: 22px;
+        }
+
+        .voucher-total {
+            font-size: 18px;
+            color: #1f1f1f;
+            margin-bottom: 6px;
+        }
+
+        .voucher-min-note {
+            p {
+                font-size: 12px;
+                color: #26241A;
+            }
+        }
+
+        .addressee-block {
+            margin-top: 26px;
+        }
+
+        .name-row {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 12px;
+        }
+
+        .field-group {
+            width: 100%;
+        }
+
+        .full-width {
+            margin-bottom: 12px;
+        }
+
+        .text-input,
+        .message-textarea {
+            width: 100%;
+            border: none;
+            outline: none;
+            background: #E3E1D5;
+            color: #333;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .text-input {
+            height: 42px;
+            padding: 0 18px;
+            border-radius: 999px;
+        }
+
+        .text-input::placeholder,
+        .message-textarea::placeholder {
+            color: #b8b2a6;
+        }
+
+        .message-textarea {
+            min-height: 118px;
+            padding: 16px 18px;
+            border-radius: 22px;
+            resize: vertical;
+        }
+
+        .required-note {
+            font-size: 12px;
+            color: #26241A;
+            margin: 8px 0 18px;
+        }
+
+        .gift-submit-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 50px;
+            border: none;
+            border-radius: 999px;
+            background: #b17c2b;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 400;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        .screen-reader-text {
+            position: absolute;
+            left: -9999px;
+        }
+
+        @media (max-width: 767px) {
+
+            .voucher-amount-row,
+            .name-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .voucher-or-text {
+                margin-top: 0;
+            }
+
+            .voucher-custom-input,
+            .voucher-select {
+                width: 100%;
+            }
+        }
+    }
+
+    .occasion-gift {
+        background-image: url('https://thelastdropcobh.com/wp-content/uploads/2026/04/food-1.webp');
+        background-color: #E3E1D5;
+        background-repeat: no-repeat;
+        background-position: right;
+        padding: 10rem 0;
+        background-size: 50% auto;
+
+        p {
+            font-size: 1.6rem;
+            font-weight: 300;
+            color: #26241A;
+            padding-right: 5rem;
+            line-height: 150%;
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    #gift_voucher_page {
+
+        .gift-voucher-hero {
+            .hero-content {
+                .hero-title {
+                    font-size: 5rem;
+                }
+            }
+        }
+
+        .gift-card {
+            padding: 5rem 1rem;
+
+            .img-data {
+                min-height: unset;
+                max-height: unset;
+                max-width: 100%;
+                display: flex;
+                gap: 2rem;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                margin-bottom: 2rem;
+
+                img {
+                    height: auto;
+                }
+
+                .offer {
+                    position: unset;
+                }
+            }
+        }
+
+        .occasion-gift {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://thelastdropcobh.com/wp-content/uploads/2026/04/food-1.webp');
+            padding: 0;
+            background-size: cover;
+            background-position: center;
+
+            .col-lg-6 {
+                padding: 4rem 2rem;
+            }
+
+            p {
+                color: #E3E1D5;
+                padding: 0;
+                font-weight: 500;
+            }
+        }
+    }
+}

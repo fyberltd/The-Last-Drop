@@ -31,6 +31,7 @@
 
 @import 'layout/footer';
 @import 'layout/header';
+@import 'layout/mobile-header';
 @import 'layout/heros';
 @import 'layout/ie-notice';
 @import 'layout/navigation-desktop';
@@ -41,8 +42,20 @@
 @import 'pages/archive';
 @import 'pages/contact-us';
 @import 'pages/homepage';
+@import 'pages/site-homepage';
+@import 'pages/our-story';
+@import 'pages/menu';
+@import 'pages/menu-new';
+@import 'pages/shop';
 @import 'pages/single';
+@import 'pages/find-us';
+@import 'pages/discover-cobh';
 @import 'pages/policy';
 @import 'pages/theme-styles';
+@import 'pages/whats-on';
+@import 'pages/gallery';
+@import 'pages/gift-voucher';
+@import 'pages/basket';
+@import 'pages/checkout';
 
 @import 'base/global';

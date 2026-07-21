@@ -13,6 +13,8 @@ $grey: #7b7b7b;
 $yellow: #f9c71b;
 $black: #231e1e;
 $white: #fafafa;
+$gold: #B17C2B;
+$dark-green: #033421;
 
 $transparent: rgba(0, 0, 0, 0);
 $boxShadow: rgba(0, 0, 0, 0.25);
@@ -32,6 +34,8 @@ $colors: (
     'yellow': #f9c71b,
     'black': #000,
     'white': #fafafa,
+    'gold': #B17C2B,
+    'dark-green': #033421,
     'trasparent': rgba(0, 0, 0, 0),
     'boxShadow': rgba(0, 0, 0, 0.25)
 );
@@ -39,6 +43,7 @@ $colors: (
 //getting colors from $colors map in _variables.scss
 // $key is the color name e.g. lightBlue and $color is the value e.g. #8CD2F1
 @each $key, $color in $colors {
+
     //creating class names bases on key .lightBlue would be {color:#8CD2F1}
     .#{$key} {
         color: #{$color};
@@ -78,39 +83,51 @@ $colors: (
 body .has-darkBlue-color {
     color: var(--wp--preset--color--blue, $darkBlue);
 }
+
 body .has-lightBlue-color {
     color: var(--wp--preset--color--lightBlue, $lightBlue);
 }
+
 body .has-orange-color {
     color: var(--wp--preset--color--orange, $orange);
 }
+
 body .has-pink-color {
     color: var(--wp--preset--color--pink, $pink);
 }
+
 body .has-blue-color {
     color: var(--wp--preset--color--blue, $blue);
 }
+
 body .has-green-color {
     color: var(--wp--preset--color--green, $green);
 }
+
 body .has-purple-color {
     color: var(--wp--preset--color--purple, $purple);
 }
+
 body .has-charcoal-color {
     color: var(--wp--preset--color--charcoal, $charcoal);
 }
+
 body .has-light-grey-color {
     color: var(--wp--preset--color--light-grey, $light-grey);
 }
+
 body .has-grey-color {
     color: var(--wp--preset--color--grey, $grey);
 }
+
 body .has-yellow-color {
     color: var(--wp--preset--color--yellow, $yellow);
 }
+
 body .has-black-color {
     color: var(--wp--preset--color--black, $black);
 }
+
 body .has-white-color {
     color: var(--wp--preset--color--white, $white);
 }

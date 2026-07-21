@@ -1,3 +1,6 @@
+<?php
+$is_basket_or_checkout = is_page_template('basket.php') || is_page_template('checkout.php');
+?>
 <!DOCTYPE html>
 
 <html <?php language_attributes(); ?>>
@@ -5,12 +8,22 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Template V5 Base</title>
-	<meta name="description" content=""><!-- TODO -->
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+	<title>The Last Drop Cobh | Restaurant & Bar in Cobh, Co. Cork</title>
+	<meta name="description"
+		content="The Last Drop Cobh is a restaurant and bar in the heart of Cobh, Co. Cork, serving Irish food, drinks and cocktails in a welcoming waterfront setting. Book a table online.">
+	<!-- TODO -->
+	<link rel="stylesheet" href="https://use.typekit.net/xtp7lfs.css">
+	<link rel="stylesheet" type="text/css"
+		href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+
 	<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-	<script>
-		window.addEventListener("load", function() {
+
+	<!-- TablePath  -->
+	<script async src="https://bookings.tablepath.com/js/dist/widget.min.js"></script>
+
+	<!-- <script>
+		window.addEventListener("load", function () {
 			window.cookieconsent.initialise({
 				"palette": {
 					"popup": {
@@ -24,7 +37,18 @@
 				}
 			})
 		});
-	</script>
+	</script> -->
+
+	<!-- Google Tag Manager -->
+	<script>(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-M9QWV5Z8');</script>
+	<!-- End Google Tag Manager -->
 
 	<!-- Slick Slider - Carousel -->
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -35,140 +59,183 @@
 ?>
 
 <body <?php body_class() ?>>
-	<header id="header" class="<?php if (is_front_page()) {
-									echo 'homepage';
-								} ?>">
-
-		<div class="container content">
-			<a href="<?php echo get_home_url(); ?>" class="logo">
-				<img src="<?php echo bloginfo('template_directory'); ?>/images/fyber-agency-logo.png" alt="logo">
-			</a>
-
-			<nav class="nav-closed">
-				<a href="<?php echo get_home_url(); ?>" class="img-container logo-mobile">
-					<img src="<?php echo bloginfo('template_directory'); ?>/images/fyber-agency-logo.png" alt="logo">
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9QWV5Z8" height="0" width="0"
+			style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<!-- Desktop Header (Live Site - Do Not Modify) -->
+	<div class="d-none d-lg-block">
+		<div class="top-bar">
+			<div class="container d-flex justify-content-center align-items-center gap-5">
+				<a href="https://thelastdropcobh.com/menu/" class="btn btn-gold"><img
+						src="<?php echo bloginfo('template_directory'); ?>/images/icons/menu-new.svg" alt="menu"> Menu
 				</a>
-
-				<?php wp_nav_menu(array('theme_location' => 'header_nav', 'container_id' => 'header_nav')); ?>
-			</nav>
-
-			<div class="mobile-nav-button">
-				<div class="bar1"></div>
-				<div class="bar2"></div>
-				<div class="bar3"></div>
+				<a href="https://bookings.tablepath.com/l2fx9d/the-last-drop-reservations" tppw-id="l2fx9d"
+					tppw-code="the-last-drop-reservations" class="btn btn-gold"> <img
+						src="<?php echo bloginfo('template_directory'); ?>/images/icons/reservations.svg" alt="table"
+						style="width: 15px;"> Reservations
+				</a>
 			</div>
 		</div>
-	</header>
+		<header id="header" class="site-homepage <?php if ($is_basket_or_checkout)
+			echo 'basket-header'; ?>" <?php if ($is_basket_or_checkout)
+				  echo 'style="background-color: #E3E1D5;"'; ?>>
+			<div class="container content">
+				<a href="https://thelastdropcobh.com/site-homepage/" class="logo">
+					<img src="<?php echo $is_basket_or_checkout ? 'https://thelastdropcobh.com/wp-content/uploads/2026/06/TLD-Cobh-basket.png' : get_template_directory_uri() . '/images/logo-horizontal.png'; ?>"
+						alt="logo">
+				</a>
 
-	<div class="ie-notice">
-		<div class="container">
-			<div class="row ie-logo">
-				<img src="<?php echo bloginfo('template_directory'); ?>/images/fyber-agency-logo.png" alt="logo">
-			</div>
+				<nav class="nav-closed <?php if ($is_basket_or_checkout)
+					echo 'basket-nav'; ?>">
+					<a href="https://thelastdropcobh.com/site-homepage/" class="img-container logo-mobile">
+						<img src="<?php echo $is_basket_or_checkout ? 'https://thelastdropcobh.com/wp-content/uploads/2026/06/TLD-Cobh-basket.png' : get_template_directory_uri() . '/images/logo-horizontal.png'; ?>"
+							alt="logo">
+					</a>
 
-			<div class="row ie-heading-row">
-				<?php get_template_part('z-layout/ie-notice'); ?>
-			</div>
-
-			<div class="row">
-				<div class="col-xl-6">
-					<section id="contact-info">
-						<div class="address">
-							<h2>Address</h2>
-							<address>
-								Fyber Agency<br>
-								Realtex House<br>
-								2 Leeds Road<br>
-								Rawdon<br>
-								LS19 6AX
-							</address>
+					<?php wp_nav_menu(array('theme_location' => 'header_nav', 'container_id' => 'header_nav')); ?>
+					<a href="https://bookings.tablepath.com/l2fx9d/the-last-drop-reservations" tppw-id="l2fx9d"
+						tppw-code="the-last-drop-reservations" class="header-reservatio-item">Reservations</a>
+					<div class="header-actions">
+						<div class="header-icons">
+							<a href="https://www.instagram.com/thelastdropcobh/" aria-label="Instagram" target="_blank">
+								<img src="<?php echo get_template_directory_uri(); ?>/images/icons/instagram.png"
+									alt="instagram">
+							</a>
+							<a href="https://www.facebook.com/people/The-Last-Drop-Cobh/61587506886679/"
+								aria-label="Facebook" target="_blank">
+								<img src="<?php echo get_template_directory_uri(); ?>/images/icons/facebook.png"
+									alt="facebook">
+							</a>
+							<a href="https://maps.app.goo.gl/FMYtyNBKJryeoqHv7" target="_blank">
+								<img src="<?php echo get_template_directory_uri(); ?>/images/icons/map-marker.png"
+									alt="map">
+							</a>
+							<a href="tel:+353214718282">
+								<img src="<?php echo bloginfo('template_directory'); ?>/images/icons/phone.svg"
+									alt="phone">
+							</a>
 						</div>
+						<!-- <div class="header-buttons">
+							<a href="https://thelastdropcobh.com/find-us/" class="btn btn-outline-gold">Find us</a>
+							<script async src="https://bookings.tablepath.com/js/dist/widget.min.js"></script><a
+								href="https://bookings.tablepath.com/l2fx9d/the-last-drop-reservations" tppw-id="l2fx9d"
+								tppw-code="the-last-drop-reservations" class="btn btn-gold">Book a Table</a>
 
-						<div class="details">
-							<h2>Phone & Email</h2>
-							<ul>
-								<li><a href="tel:0113 898 0481">0113 898 0481</a></li>
-								<li><a href="mailto:contact@fyber.co.uk">info@fyber.co.uk</a></li>
-							</ul>
+						</div> -->
+					</div>
+				</nav>
 
-							<div class="social_media">
-								<a href="https://www.instagram.com/fyberltd/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
-										<defs>
-											<style>
-												.cls-1 {
-													fill: #F7AE61;
-												}
-											</style>
-										</defs>
-										<g id="Layer_2" data-name="Layer 2">
-											<g id="Layer_1-2" data-name="Layer 1">
-												<path class="cls-1" d="M30,24.67A5.33,5.33,0,1,0,35.33,30,5.32,5.32,0,0,0,30,24.67Zm0,0A5.33,5.33,0,1,0,35.33,30,5.32,5.32,0,0,0,30,24.67ZM30,0a30,30,0,1,0,0,60,29.18,29.18,0,0,0,3.88-.25A30,30,0,0,0,30,0ZM45.9,36.6c-.26,5.81-3.5,9-9.3,9.3-1.71.08-2.25.1-6.6.1s-4.89,0-6.6-.1c-5.81-.26-9-3.49-9.3-9.3C14,34.89,14,34.35,14,30s0-4.89.1-6.6c.26-5.81,3.49-9,9.3-9.3C25.11,14,25.65,14,30,14s4.89,0,6.6.1c5.81.26,9,3.5,9.3,9.3.08,1.71.1,2.25.1,6.6S46,34.89,45.9,36.6ZM36.47,17c-1.69-.08-2.2-.1-6.47-.1s-4.78,0-6.47.1c-4.34.19-6.36,2.25-6.55,6.55-.08,1.69-.1,2.2-.1,6.47s0,4.78.1,6.47c.19,4.29,2.21,6.36,6.55,6.56,1.69.07,2.2.09,6.47.09s4.78,0,6.47-.09c4.34-.2,6.36-2.26,6.56-6.56.07-1.69.09-2.2.09-6.47s0-4.78-.09-6.46C42.83,19.23,40.8,17.17,36.47,17ZM30,38.22A8.22,8.22,0,1,1,38.22,30,8.22,8.22,0,0,1,30,38.22Zm8.54-14.84a1.92,1.92,0,1,1,1.92-1.92A1.92,1.92,0,0,1,38.54,23.38ZM30,24.67A5.33,5.33,0,1,0,35.33,30,5.32,5.32,0,0,0,30,24.67Z" />
-											</g>
-										</g>
-									</svg>
-								</a>
-
-								<a href="https://twitter.com/fyberltd" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
-										<defs>
-											<style>
-												.cls-1 {
-													fill: #F7AE61;
-												}
-											</style>
-										</defs>
-										<g id="Layer_2" data-name="Layer 2">
-											<g id="Layer_1-2" data-name="Layer 1">
-												<path class="cls-1" d="M30,0a30,30,0,1,0,0,60,29.18,29.18,0,0,0,3.88-.25A30,30,0,0,0,30,0ZM43.52,23.07c.44,9.81-6.87,20.75-19.83,20.75A19.74,19.74,0,0,1,13,40.68,14,14,0,0,0,23.33,37.8,7,7,0,0,1,16.81,33,6.93,6.93,0,0,0,20,32.83a7,7,0,0,1-5.6-6.93,7,7,0,0,0,3.16.87,7,7,0,0,1-2.15-9.31,19.78,19.78,0,0,0,14.37,7.29,7,7,0,0,1,11.89-6.37,13.8,13.8,0,0,0,4.43-1.69A6.94,6.94,0,0,1,43,20.55a13.76,13.76,0,0,0,4-1.1A14.09,14.09,0,0,1,43.52,23.07Z" />
-											</g>
-										</g>
-									</svg>
-								</a>
-
-								<a href="https://www.facebook.com/fyberltd" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 59.75">
-										<defs>
-											<style>
-												.cls-1 {
-													fill: #F7AE61;
-												}
-											</style>
-										</defs>
-										<g id="Layer_2" data-name="Layer 2">
-											<g id="Layer_1-2" data-name="Layer 1">
-												<path class="cls-1" d="M30,0a30,30,0,0,0-5.3,59.53V38.21H17V29.3H24.7V22.75C24.7,15.15,29.34,11,36.13,11a58.2,58.2,0,0,1,6.85.37v8H38.29c-3.7,0-4.41,1.74-4.41,4.31v5.7h8.8l-1.15,8.88H33.88V59.75A30,30,0,0,0,30,0Z" />
-											</g>
-										</g>
-									</svg>
-								</a>
-
-								<a href="https://uk.linkedin.com/company/fyber-ltd " target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
-										<defs>
-											<style>
-												.cls-1 {
-													fill: #F7AE61;
-												}
-											</style>
-										</defs>
-										<g id="Layer_2" data-name="Layer 2">
-											<g id="Layer_1-2" data-name="Layer 1">
-												<path class="cls-1" d="M30,0a30,30,0,1,0,0,60,29.18,29.18,0,0,0,3.88-.25A30,30,0,0,0,30,0ZM21.36,46.05h-7V24.9h7ZM17.84,21.76a3.91,3.91,0,1,1,3.88-3.91A3.89,3.89,0,0,1,17.84,21.76ZM46,46.05H39V36c0-6.63-7.06-6.07-7.06,0V46.05h-7V24.9h7.05v3.86C35,23.06,46,22.64,46,34.21Z" />
-											</g>
-										</g>
-									</svg>
-								</a>
-							</div>
-						</div>
-					</section>
+				<div class="mobile-nav-button">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
 				</div>
+			</div>
+		</header>
+	</div>
 
-				<div class="col-xl-6 flex-center">
-					<section id="contact-form-wrap">
-						<h2>Ask us!</h2>
-						<?php echo do_shortcode('[contact-form-7 id="13" title="Contact form 1"]'); ?>
-					</section>
+	<!-- Mobile Header (Newly Added) -->
+	<div class="d-block d-lg-none <?php if ($is_basket_or_checkout)
+		echo 'basket-mobile-header'; ?>">
+		<div class="mobile-announcement-bar">
+			<div class="container">
+				<div class="row align-items-center">
+					<!-- <div class="col-8">
+						<h5 class="laima-font text-white mb-0">The Last Drop is Now Open!</h5>
+					</div> -->
+					<div class="col-12 text-center">
+						<a href="https://thelastdropcobh.com/menu/" class="btn btn-gold">
+							<img src="<?php echo bloginfo('template_directory'); ?>/images/icons/menu-new.svg"
+								alt="menu" style="width: 15px;"> Menu
+						</a>
+						<a href="https://bookings.tablepath.com/l2fx9d/the-last-drop-reservations" tppw-id="l2fx9d"
+							tppw-code="the-last-drop-reservations" class="btn btn-gold">
+							<img src="<?php echo bloginfo('template_directory'); ?>/images/icons/reservations.svg"
+								alt="table" style="width: 15px;"> Reservations
+						</a>
+					</div>
 				</div>
+			</div>
+		</div>
+
+		<header class="mobile-nav-bar">
+			<div class="container d-flex justify-content-between align-items-center py-3">
+				<div class="mobile-menu-trigger">
+					<img src="<?php echo bloginfo('template_directory'); ?>/images/icons/Menu.svg" alt="Menu"
+						width="30">
+				</div>
+				<a href="https://thelastdropcobh.com/site-homepage/" class="mobile-logo">
+					<img src="<?php echo $is_basket_or_checkout ? 'https://thelastdropcobh.com/wp-content/uploads/2026/06/TLD-Cobh-basket.png' : get_template_directory_uri() . '/images/logo-horizontal.png'; ?>"
+						alt="logo" width="180">
+				</a>
+				<div class="mobile-phone-link">
+					<a href="tel:+353214718282">
+						<img src="<?php echo bloginfo('template_directory'); ?>/images/icons/phone.svg" alt="phone"
+							width="24">
+					</a>
+				</div>
+			</div>
+		</header>
+	</div>
+
+	<!-- Mobile Menu Overlay -->
+	<div class="mobile-nav-overlay d-lg-none" id="mobile-overlay">
+		<div class="overlay-header container d-flex justify-content-between align-items-center py-3">
+			<div class="overlay-close-trigger">
+				<img src="<?php echo bloginfo('template_directory'); ?>/images/icons/Menu.svg" alt="Close Menu"
+					width="30">
+			</div>
+			<div class="overlay-logo">
+				<img src="<?php echo get_template_directory_uri() . '/images/logo-horizontal.png'; ?>" alt="logo"
+					width="180">
+			</div>
+			<div class="overlay-phone">
+				<a href="tel:+353214718282">
+					<img src="<?php echo bloginfo('template_directory'); ?>/images/icons/phone.svg" alt="phone"
+						width="24">
+				</a>
+			</div>
+		</div>
+
+		<div class="overlay-content text-center">
+			<ul class="mobile-menu-list list-unstyled">
+				<li><a href="https://thelastdropcobh.com/our-story/">Our Story</a></li>
+				<li><a href="https://thelastdropcobh.com/menu/">Menu</a></li>
+				<li><a href="https://thelastdropcobh.com/discover-cobh/">Discover Cobh</a></li>
+				<li><a href="https://thelastdropcobh.com/contact-us/">Contact Us</a></li>
+				<li><a href="https://thelastdropcobh.com/find-us/">Find us</a></li>
+				<li>
+					<a href="https://bookings.tablepath.com/l2fx9d/the-last-drop-reservations" tppw-id="l2fx9d"
+						tppw-code="the-last-drop-reservations">Reservations</a>
+				</li>
+			</ul>
+			<div class="mobile-icons">
+				<a href="https://www.instagram.com/thelastdropcobh/" aria-label="Instagram" target="_blank">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/icons/instagram.png" alt="instagram">
+				</a>
+				<a href="https://www.facebook.com/people/The-Last-Drop-Cobh/61587506886679/" aria-label="Facebook"
+					target="_blank">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/icons/facebook.png" alt="facebook">
+				</a>
+				<a href="https://maps.app.goo.gl/FMYtyNBKJryeoqHv7" target="_blank">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/icons/map-marker.png" alt="map">
+				</a>
+				<!-- <a href="tel:+353214718282">
+					<img src="<?php echo bloginfo('template_directory'); ?>/images/icons/phone.svg" alt="phone">
+				</a> -->
+			</div>
+		</div>
+
+		<div class="overlay-footer text-center w-100 pb-5">
+			<div class="d-flex justify-content-center gap-4">
+				<a href="https://thelastdropcobh.com/privacy-policy-2/" class="text-white text-decoration-none"
+					style="font-size: 1.2rem;">Privacy Policy</a>
+				<a href="https://thelastdropcobh.com/privacy-policy-2/" class="text-white text-decoration-none"
+					style="font-size: 1.2rem;">Cookie Policy</a>
 			</div>
 		</div>
 	</div>
 
 	<div id="wrapper">
-		<div class="header-spacing"></div>
+		<!-- <div class="header-spacing"></div> -->

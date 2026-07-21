@@ -1,0 +1,315 @@
+#discover_cobh_page {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        // color: #EBE9DF;
+        // font-family: 'Lexend';
+        // font-weight: 300;
+        // letter-spacing: 20%;
+    }
+
+    p,
+    span {
+        color: #EBE9DF;
+        font-family: 'Lexend';
+        font-weight: 300;
+    }
+
+    .discover-cobh-hero {
+        position: relative;
+        height: 100%;
+        min-height: 420px;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: 100%;
+            height: auto;
+            z-index: -2;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: -1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+
+            .hero-title {
+                font-family: "laima", serif;
+                font-size: 60px;
+                margin: 0;
+                line-height: 1.1;
+                text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+                color: #EBE9DF;
+            }
+        }
+    }
+
+    .nearby-attractions-section {
+        background-color: #EBE9DF;
+        padding: 10rem 0;
+
+        @include media-breakpoint-down(sm) {
+            padding: 5rem 1.5rem;
+        }
+
+        .section-header {
+            .section-title {
+                color: #b17c2b;
+                font-weight: 400;
+
+                @include media-breakpoint-down(md) {
+                    font-size: 32px;
+                }
+            }
+
+            .section-intro {
+                font-size: 16px;
+                color: #033421;
+                line-height: 1.6;
+                margin: 0;
+                font-weight: 300;
+            }
+        }
+
+        .attractions-grid {
+            margin-top: 6rem;
+        }
+
+        .attraction-col {
+            border-left: 1px solid #B17C2B;
+            padding-left: 4rem;
+            padding-right: 4rem;
+
+            &:nth-child(3n+1) {
+                border-left: none;
+                padding-left: 0;
+            }
+
+            &:nth-child(n+4) {
+                margin-top: 8rem;
+            }
+
+            @include media-breakpoint-down(lg) {
+                border-left: none;
+                border-bottom: 1px solid #B17C2B;
+                padding: 4rem 0;
+                margin-top: 0;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+
+        .attraction-card {
+            background: transparent;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            transform: translateX(80px);
+            transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+            &.revealed {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            .img-wrapper {
+                max-height: 380px;
+                min-height: 380px;
+                overflow: hidden;
+                margin-bottom: 3rem;
+                border-radius: 2px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+                }
+
+                &:hover img {
+                    transform: scale(1.08);
+                }
+            }
+
+            .card-content {
+                .attraction-name {
+                    font-size: 20px;
+                    font-family: 'Lexend';
+                    font-weight: 400;
+                    color: #B17C2B;
+                    margin-bottom: 2rem;
+                }
+
+                .attraction-subname {
+                    font-size: 16px;
+                    font-family: 'Lexend';
+                    font-weight: 400;
+                    margin-top: 3rem;
+                    margin-bottom: 1.5rem;
+                }
+
+                .attraction-desc {
+                    font-size: 14px;
+                    font-weight: 300;
+                    color: #033421;
+                    line-height: 1.7;
+                    margin-bottom: 3rem;
+                    min-height: 120px;
+
+                    @include media-breakpoint-down(lg) {
+                        min-height: auto;
+                    }
+                }
+
+                .distance-info,
+                .website-info {
+                    margin-bottom: 2rem;
+
+                    .label {
+                        font-size: 12px;
+                        color: #033421;
+                        margin-bottom: 1rem;
+                        font-weight: 300;
+                        opacity: 0.8;
+                    }
+                }
+
+                .badge {
+                    display: inline-block;
+                    padding: 0.6rem 1.8rem;
+                    background-color: #E3E1D5;
+                    color: #033421;
+                    font-size: 12px;
+                    border-radius: 50px;
+                    font-weight: 400;
+                }
+
+                .btn-outline-dark {
+                    font-size: 12px;
+                    display: inline-block;
+                    padding: 0.6rem 2.2rem;
+                    border-radius: 50px;
+                    text-transform: none;
+                    color: #033421;
+                    border: 1px solid rgba(177, 124, 43, 0.5);
+                    background: transparent;
+                    transition: all 0.3s ease;
+                    text-decoration: none;
+                    color: #26241A;
+
+                    &:hover {
+                        background: #B17C2B;
+                        color: #fff;
+                        border-color: #B17C2B;
+                    }
+                }
+            }
+        }
+    }
+
+    .find-us-cta {
+        background-color: #EBE9DF;
+        padding: 8rem 0;
+
+        .cta-content {
+            text-align: center;
+
+            .section-title {
+                font-size: clamp(3rem, 5vw, 4.5rem);
+                color: #B17C2B;
+                line-height: 1.2;
+            }
+
+            p {
+                font-size: 1.6rem;
+                color: #26241A;
+                max-width: 600px;
+                margin: 0 auto 3rem;
+                font-weight: 300;
+            }
+
+            .btn.btn-gold {
+                &:hover {
+                    color: #26241A;
+                    border-color: #B17C2B;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    #find_us_page {
+        .general-info-section {
+            padding: 4rem 3rem;
+        }
+
+        .address-map-section {
+            padding: 4rem 3rem;
+
+            .address-details {
+                margin-bottom: 3rem;
+            }
+
+            #map-container {
+                height: 400px;
+            }
+        }
+
+        .opening-parking-section {
+            padding-bottom: 2rem;
+
+            .opening-hours {
+                padding-right: 0;
+            }
+        }
+
+        .getting-here-section {
+            padding: 4rem 3rem;
+        }
+
+        .nearby-attractions-section {
+            padding: 4rem 3rem;
+
+            .attractions-grid {
+                margin: 0;
+
+                .attraction-col {
+                    padding: unset;
+                    border: none;
+
+                    &:first-child {
+                        padding-left: unset;
+                    }
+                }
+            }
+        }
+    }
+}

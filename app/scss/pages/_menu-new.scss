@@ -1,0 +1,963 @@
+#menu_page {
+
+    // h1,
+    // h2,
+    // h3,
+    // h4,
+    // h5,
+    // h6 {
+    //     color: #EBE9DF;
+    //     font-family: 'Lexend';
+    //     font-weight: 300;
+    //     letter-spacing: 20%;
+    // }
+
+    // p,
+    // span {
+    //     color: #EBE9DF;
+    //     font-family: 'Lexend';
+    //     font-weight: 300;
+    // }
+
+    .text-gold {
+        color: #B17C2B !important;
+    }
+
+    .bg-dark-green {
+        background-color: #033421 !important;
+    }
+
+    .border-top-gold {
+        border-top: 1px solid rgba(177, 124, 43, 0.3);
+    }
+
+    .menu-hero {
+        position: relative;
+        height: 100%;
+        min-height: 420px;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: 100%;
+            height: auto;
+            z-index: -2;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: -1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+
+            .hero-title {
+                font-family: "laima", serif;
+                font-size: 60px;
+                margin: 0;
+                line-height: 1.1;
+                text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+                color: #EBE9DF;
+            }
+        }
+    }
+
+    .menu-selection-section {
+        background-color: #033421;
+        padding: 8rem 0;
+        color: #fff;
+
+        .section-title {
+            font-size: 2.4rem;
+            margin-bottom: 5rem;
+            font-family: 'Lexend';
+            color: #ebe9df;
+            font-weight: 300;
+            letter-spacing: 20%;
+        }
+
+        .menu-selection-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-bottom: 4rem;
+
+            @include media-breakpoint-down(lg) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include media-breakpoint-down(sm) {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .menu-box {
+            height: 250px;
+            background-color: #052C1B;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: visible;
+            border: 1px solid rgba(177, 124, 43, 0.1);
+            text-decoration: none;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                border: 2px solid transparent;
+                box-sizing: border-box;
+                pointer-events: none;
+                z-index: 5;
+            }
+
+            &::before {
+                top: -1px;
+                left: -1px;
+            }
+
+            &::after {
+                bottom: -1px;
+                right: -1px;
+            }
+
+            &:hover {
+                transform: translateY(-10px);
+                background-color: #073a24;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+
+                &::before {
+                    width: calc(100% + 2px);
+                    height: calc(100% + 2px);
+                    border-top-color: #B17C2B;
+                    border-right-color: #B17C2B;
+                    transition: width 0.15s linear, height 0.15s linear 0.15s;
+                }
+
+                &::after {
+                    width: calc(100% + 2px);
+                    height: calc(100% + 2px);
+                    border-bottom-color: #B17C2B;
+                    border-left-color: #B17C2B;
+                    transition: width 0.15s linear 0.3s, height 0.15s linear 0.45s;
+                }
+            }
+
+            &.active {
+                // background-color: #073a24;
+                border-color: #B17C2B;
+                box-shadow: 0 10px 30px rgba(177, 124, 43, 0.15);
+
+                &::before,
+                &::after {
+                    width: calc(100% + 2px);
+                    height: calc(100% + 2px);
+                    border-color: #B17C2B;
+                }
+            }
+
+            .box-content {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 2.5rem;
+                transition: transform 0.3s ease;
+            }
+
+            &:hover .box-content {
+                transform: scale(1.05);
+            }
+
+            .menu-icon {
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    max-height: 100%;
+                    width: auto;
+                }
+            }
+
+            .menu-label {
+                font-size: 1.6rem;
+                letter-spacing: 20%;
+                color: #EBE9DF;
+            }
+
+            .download-trigger {
+                width: 28px;
+                height: 28px;
+                border-radius: 50%;
+                background-color: #B17C2B;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+
+                img {
+                    width: 12px;
+                }
+            }
+        }
+
+        .pdf-notice {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            font-size: clamp(1.4rem, 2vw, 1.6rem);
+            margin-top: 2rem;
+
+            span {
+                color: #EBE9DF;
+                font-family: 'Lexend';
+            }
+
+            img {
+                width: 25px;
+                height: 25px;
+                background-color: #B17C2B;
+                border-radius: 50%;
+                padding: 6px;
+            }
+        }
+    }
+
+    .menu-display-section {
+        background-color: #052C1B;
+        padding: 10rem 0;
+        color: #EBE9DF;
+
+        .menu-category-title {
+            font-size: clamp(2.4rem, 4vw, 3.2rem);
+            margin-bottom: 5rem;
+            font-weight: 300;
+            font-family: 'Lexend';
+            color: #ebe9df;
+            letter-spacing: 20%;
+        }
+
+        p {
+            color: #EBE9DF;
+        }
+
+        .menu-group {
+            display: grid;
+            grid-template-columns: 400px 1fr;
+            gap: 6rem;
+            margin-bottom: 2rem;
+
+            @include media-breakpoint-down(lg) {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .group-header {
+                .group-main-title {
+                    font-size: clamp(3rem, 4vw, 4.2rem);
+                    margin-bottom: 1.5rem;
+                    line-height: 1.2;
+                }
+
+                .group-subtitle {
+                    font-size: 2.4rem;
+                    color: #EBE9DF;
+                    font-weight: 300;
+                }
+            }
+
+            .group-items {
+                p {
+                    color: #EBE9DF;
+                    font-size: 1.6rem;
+                }
+
+                .menu-item-row {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    padding: 1.5rem 0;
+
+                    &:first-child {
+                        padding-top: 0;
+                    }
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+
+                    .item-info {
+                        h4 {
+                            font-size: 1.6rem;
+                            color: #ebe9df;
+                            margin-bottom: 1rem;
+                            letter-spacing: 0;
+                            font-weight: 400;
+                            font-family: 'Lexend';
+                        }
+
+                        .item-irish {
+                            color: #B17C2B;
+                            margin-top: -0.5rem;
+                            margin-bottom: 1rem;
+                            font-style: italic;
+                            font-size: 1.2rem;
+                            opacity: 0.8;
+                        }
+
+                        p {
+                            font-size: 1.4rem;
+                            margin-top: 1rem;
+                            color: #EBE9DF;
+                            font-weight: 300;
+                        }
+                    }
+
+                    .item-price {
+                        font-size: 1.6rem;
+                        font-weight: 400;
+                        white-space: nowrap;
+                        color: #EBE9DF;
+                        font-family: 'Lexend';
+                    }
+                }
+
+                .menu-extras {
+                    p {
+                        font-size: 1.4rem;
+                        margin-bottom: 0.5rem;
+
+                        span {
+                            color: #B17C2B;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+
+                .drinks-list-flex {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 1.5rem;
+                    row-gap: 1rem;
+
+                    span {
+                        font-size: 1.6rem;
+                        font-weight: 400;
+                        color: #EBE9DF;
+                        line-height: 1.4;
+                        font-family: 'Lexend';
+                    }
+
+                    .separator {
+                        color: #EBE9DF;
+                        opacity: 0.8;
+                    }
+                }
+
+                .drinks-list {
+                    p {
+                        font-size: 1.6rem;
+                        font-weight: 400;
+                        color: #EBE9DF;
+                        margin-bottom: 1rem;
+                        opacity: 1;
+                    }
+                }
+
+                .whiskey-grid,
+                .allergens-grid {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 4rem;
+
+                    @include media-breakpoint-down(md) {
+                        grid-template-columns: 1fr;
+                    }
+
+                    p {
+                        font-size: 1.6rem;
+                        font-weight: 400;
+                        color: #EBE9DF;
+                        margin-bottom: 2rem;
+                        line-height: 1.3;
+
+                        strong {
+                            display: block; // Stack the number
+                            color: #B17C2B;
+                            margin-bottom: 0.5rem;
+                            font-family: 'Lexend';
+                        }
+                    }
+                }
+
+                .allergens-grid {
+                    p {
+                        display: flex;
+                        gap: 0.5rem;
+
+                        span {
+                            color: #B17C2B;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #drinks-menu-section {
+        background-color: #EBE9DF;
+        padding: 10rem 0;
+        color: #26241a;
+        position: relative;
+        overflow: hidden;
+
+        .drinks-bg-watermark {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            height: 60%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.08;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .drinks-img-left {
+            position: absolute;
+            top: 0;
+            left: -8%;
+            width: 33%;
+            z-index: 2;
+            pointer-events: none;
+
+            @include media-breakpoint-down(xl) {
+                // display: none;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .drinks-img-right {
+            position: absolute;
+            bottom: -50px;
+            right: -10%;
+            width: 38%;
+            z-index: 2;
+            pointer-events: none;
+
+            @include media-breakpoint-down(xl) {
+                // display: none;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .menu-category-title {
+            position: relative;
+            z-index: 5;
+            margin-bottom: 6rem;
+        }
+
+        .drinks-accordion {
+            position: relative;
+            z-index: 10;
+            max-width: 1280px;
+            margin: 0 auto;
+
+            .drinks-toggle-item {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+                padding: 1.5rem 0;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                .drinks-toggle-header {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 1rem;
+                    transition: all 0.3s ease;
+
+                    h3 {
+                        font-size: 3rem;
+                        margin-bottom: 1rem;
+                        transition: transform 0.3s ease;
+                    }
+
+                    .toggle-arrow {
+                        width: 25px;
+                        height: 25px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        animation: bounceDown 2s infinite;
+                        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+
+                    &:hover {
+                        h3 {
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+
+                .drinks-toggle-content {
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+                    text-align: center;
+
+                    .content-inner {
+                        padding: 2.5rem 0;
+                    }
+
+                    // Detailed Wine Section Styles
+                    .wine-nested-categories {
+                        padding-top: 2rem;
+
+                        .wine-detail-row {
+                            color: #26241a;
+                        }
+
+                        .wine-subcategory-group {
+                            margin-bottom: 6rem;
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+
+                            .col-lg-4 {
+                                padding: 0 4rem;
+                            }
+
+                            .wine-subcategory-title {
+                                font-size: 3rem;
+                                font-weight: 400;
+                                font-family: 'Lexend';
+                                color: #26241a;
+                                margin-bottom: 4rem;
+                                position: relative;
+                                display: inline-block;
+
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    bottom: -10px;
+                                    left: 25%;
+                                    width: 50%;
+                                    height: 1px;
+                                    background-color: #B17C2B;
+                                    opacity: 0.5;
+                                }
+                            }
+                        }
+
+                        .detailed-wine-item {
+                            padding: 1rem 0;
+                            text-align: left;
+                            font-family: 'Lexend', sans-serif !important;
+
+                            .wine-title-area {
+                                margin-bottom: 2rem;
+
+                                .wine-name {
+                                    font-size: 2.2rem;
+                                    color: #26241a;
+                                    margin-bottom: 0.5rem;
+                                    font-family: 'Lexend', sans-serif !important;
+                                    font-weight: 400;
+                                }
+
+                                .wine-subtitle {
+                                    font-size: 1.2rem;
+                                    color: #26241a !important;
+                                    opacity: 0.6;
+                                    letter-spacing: 0.05em;
+                                    font-weight: 400;
+                                }
+                            }
+
+                            .wine-details-area {
+                                .wine-detail-row {
+                                    font-size: 1.6rem;
+                                    color: #26241a !important;
+                                    margin-bottom: 0.6rem;
+
+                                    strong {
+                                        font-weight: 500;
+                                        color: #B17C2B;
+                                        margin-right: 0.5rem;
+                                    }
+                                }
+
+                                .wine-tasting-notes {
+                                    margin-top: 1.5rem;
+
+                                    strong {
+                                        font-size: 1.6rem;
+                                        color: #B17C2B;
+                                    }
+
+                                    p {
+                                        font-size: 1.6rem;
+                                        color: #26241a !important;
+
+                                    }
+                                }
+                            }
+
+                            .wine-pricing-area {
+                                justify-content: flex-start !important;
+
+                                .price-item {
+                                    font-size: 1.5rem;
+                                    color: #26241a !important;
+                                    font-family: 'Lexend', sans-serif !important;
+
+                                    strong {
+                                        font-weight: 500;
+                                        margin-right: 0.5rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.active {
+                    .drinks-toggle-header {
+                        .toggle-arrow {
+                            transform: rotate(180deg);
+                            animation: none; // Stop bouncing when active/opened
+                        }
+                    }
+                }
+            }
+        }
+
+        .drinks-list-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            row-gap: 1rem;
+            justify-content: center;
+
+            span {
+                font-size: 1.6rem;
+                font-weight: 500;
+                color: #26241a;
+                line-height: 1.4;
+                font-family: 'Lexend', sans-serif;
+            }
+
+            .separator {
+                color: #26241a;
+                opacity: 0.5;
+            }
+        }
+
+        .whiskey-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            text-align: left;
+
+            @include media-breakpoint-down(md) {
+                grid-template-columns: 1fr;
+            }
+
+            p {
+                color: #26241a;
+                font-size: 1.6rem;
+                margin-bottom: 1rem;
+                font-weight: 500;
+            }
+        }
+    }
+
+    @keyframes bounceDown {
+
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+            transform: translateY(0);
+        }
+
+        40% {
+            transform: translateY(8px);
+        }
+
+        60% {
+            transform: translateY(4px);
+        }
+    }
+
+    .craft-cocktails-section {
+        background-color: #EBE9DF;
+        padding: 10rem 0;
+        position: relative;
+        overflow: hidden;
+
+        .craft-bg-layer {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: auto;
+            width: 50%;
+            height: 80%;
+            background-repeat: no-repeat;
+            background-position: top left;
+            background-size: cover;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .relative-z {
+            position: relative;
+            z-index: 5;
+        }
+
+        .section-main-title {
+            font-size: 3.2rem;
+            color: #26241A;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 20%;
+            font-family: 'Lexend';
+        }
+
+        .section-intro {
+            font-size: 1.6rem;
+            color: #26241A;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .section-price {
+            font-size: 1.6rem;
+            color: #26241A;
+            font-weight: 500;
+        }
+
+        .cocktails-content-wrapper {
+            position: relative;
+            margin-top: 4rem;
+        }
+
+        .coffee-image-container {
+            position: absolute;
+            width: 46%;
+            z-index: 2;
+            left: -10%;
+            bottom: 0;
+            pointer-events: none;
+
+            @include media-breakpoint-down(xl) {
+                // display: none;
+            }
+
+            .coffee-img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .cocktails-list-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+
+            @include media-breakpoint-down(md) {
+                grid-template-columns: 1fr;
+            }
+
+            .cocktail-item {
+                h4 {
+                    font-size: 2.8rem;
+                    color: #B17C2B;
+                    font-family: 'laima', serif;
+                    margin-bottom: 1rem;
+                    letter-spacing: 0.02em;
+                    font-weight: 400;
+                }
+
+                p {
+                    font-size: 1.4rem;
+                    color: #26241A;
+                    line-height: 1.6;
+                    font-weight: 400;
+                    margin: 0;
+                }
+            }
+        }
+
+        .food-image-container {
+            position: absolute;
+            top: -8%;
+            right: -15%;
+            width: 43%;
+            z-index: 2;
+            pointer-events: none;
+
+            @include media-breakpoint-down(xl) {
+                // display: none;
+            }
+
+            .food-img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .menu-cta {
+        background-color: #052C1B;
+        padding: 8rem 0;
+
+        .cta-content {
+            text-align: center;
+
+            .section-title {
+                font-size: clamp(3rem, 5vw, 4.5rem);
+                color: #B17C2B;
+                line-height: 1.2;
+            }
+
+            p {
+                font-size: 1.6rem;
+                color: #EBE9DF;
+                max-width: 600px;
+                margin: 0 auto 3rem;
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    #menu_page {
+        .menu-selection-section {
+            padding: 3rem 2rem;
+
+            .container {
+                width: 95%;
+            }
+        }
+
+        .menu-display-section {
+            padding: 4rem 2rem;
+
+            .container {
+                width: 95%;
+
+                .menu-group {
+                    .group-items {
+                        .menu-item-row {
+                            gap: 3rem;
+
+                            .item-info {
+                                p {
+                                    font-size: 1.2rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .drinks-menu-section {
+            .drinks-bg-watermark {
+                width: 100%;
+                height: 80%;
+            }
+
+            .drinks-img-left {
+                top: -40px;
+                left: -40%;
+                width: 100%;
+            }
+
+            .drinks-img-right {
+                bottom: 0;
+                right: -35%;
+                width: 100%;
+            }
+        }
+
+        .craft-cocktails-section {
+            padding: 5rem 0;
+
+            .craft-bg-layer {
+                width: 100%;
+                height: 100%;
+            }
+
+            .coffee-image-container {
+                width: 100%;
+                left: -22%;
+            }
+
+            .food-image-container {
+                top: 0;
+                right: -20%;
+                width: 70%;
+            }
+        }
+    }
+
+    .honour-section {
+        .container {
+            h2 {
+                font-size: 5rem;
+            }
+        }
+    }
+}

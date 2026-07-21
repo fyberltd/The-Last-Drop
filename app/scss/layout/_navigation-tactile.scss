@@ -73,8 +73,12 @@
                         }
                     }
                 }
-            } // END .menu
-        } // END nav-closed
+            }
+
+            // END .menu
+        }
+
+        // END nav-closed
 
         .mobile-nav-button {
             display: block;
@@ -82,7 +86,7 @@
             bottom: 3rem;
             right: 3rem;
             padding: 1.5rem;
-            background-color: $blue;
+            background-color: #B17C2B;
             border-radius: 50%;
             z-index: 999;
 
@@ -106,12 +110,14 @@
                     transform: rotate(-45deg) translate(-6px, 6px);
                 }
             }
+
             .bar2 {
                 &.change {
                     background-color: $white;
                     opacity: 0;
                 }
             }
+
             .bar3 {
                 &.change {
                     background-color: $white;
@@ -120,5 +126,9 @@
                 }
             }
         }
-    } // END .container.content
-} // END #header
+    }
+
+    // END .container.content
+}
+
+// END #header

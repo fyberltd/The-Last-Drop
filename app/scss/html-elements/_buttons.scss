@@ -15,10 +15,59 @@ button {
     }
 
     &:hover {
-        color: black;
         background-color: rgb(200, 200, 200);
         text-decoration: none;
         transition: all 0.25s ease-in-out;
+    }
+}
+
+.btn {
+    border-radius: 3rem;
+    padding: 1rem 3rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Lexend';
+    font-weight: 400;
+
+    @include media-breakpoint-down(sm) {
+        padding: 1rem 2rem;
+        font-size: 1.4rem;
+    }
+}
+
+.btn-gold {
+    background-color: #B17C2B;
+    color: #fff;
+    border: 1px solid #B17C2B;
+
+    &:hover {
+        border: 1px solid #ffffff;
+        color: #fff;
+    }
+}
+
+.btn-outline-gold {
+    background-color: transparent;
+    color: #26241A; // Match screenshot white text? wait, screenshot text looks gold or white.
+    border: 1px solid #B17C2B;
+
+    &:hover {
+        background-color: #B17C2B;
+        color: #fff;
+    }
+}
+
+.btn-outline-white {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+
+    &:hover {
+        background-color: #fff;
+        color: #000;
     }
 }
 
@@ -39,4 +88,24 @@ button {
         color: $white;
         text-decoration: none;
     }
+}
+
+a.btn.btn-outline-gold:active {
+    border: 1px solid #ffffff;
+    color: #fff;
+}
+
+a.btn.btn-gold:active {
+    border: 1px solid #ffffff;
+    color: #fff;
+}
+
+a.btn.btn-outline-gold:focus-visible {
+    border: 1px solid #ffffff;
+    color: #fff;
+}
+
+a.btn.btn-gold:focus-visible {
+    border: 1px solid #ffffff;
+    color: #fff;
 }

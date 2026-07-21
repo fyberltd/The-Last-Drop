@@ -42,12 +42,12 @@ gulp.task('css', function () {
             })
         )
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('fyberV5/css'));
+        .pipe(gulp.dest('theLastDrop/css'));
 });
 
 //create sourcemaps, compile into one file, minify
 gulp.task('js', function () {
-    del(['fyberV5/js']);
+    del(['theLastDrop/js']);
 
     return gulp
         .src([
@@ -64,7 +64,7 @@ gulp.task('js', function () {
             })
         )
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('fyberV5/js'));
+        .pipe(gulp.dest('theLastDrop/js'));
 });
 
 //copy php files to app
@@ -76,7 +76,7 @@ gulp.task('phpPush', function () {
                 errorHandler: onError,
             })
         )
-        .pipe(gulp.dest('fyberV5'));
+        .pipe(gulp.dest('theLastDrop'));
 });
 
 gulp.task('PHPHashInject', function () {
@@ -85,7 +85,7 @@ gulp.task('PHPHashInject', function () {
     return gulp
         .src('app/functions.php')
         .pipe(inject.replace('v1.0', 'v=' + myHash))
-        .pipe(gulp.dest('fyberV5'));
+        .pipe(gulp.dest('theLastDrop'));
 });
 
 gulp.task('phpPushAcf', function () {
@@ -96,7 +96,7 @@ gulp.task('phpPushAcf', function () {
                 errorHandler: onError,
             })
         )
-        .pipe(gulp.dest('fyberV5/z-acf-layout'));
+        .pipe(gulp.dest('theLastDrop/z-acf-layout'));
 });
 gulp.task('phpPushComponents', function () {
     return gulp
@@ -106,7 +106,7 @@ gulp.task('phpPushComponents', function () {
                 errorHandler: onError,
             })
         )
-        .pipe(gulp.dest('fyberV5/z-components'));
+        .pipe(gulp.dest('theLastDrop/z-components'));
 });
 gulp.task('phpPushLayout', function () {
     return gulp
@@ -116,7 +116,7 @@ gulp.task('phpPushLayout', function () {
                 errorHandler: onError,
             })
         )
-        .pipe(gulp.dest('fyberV5/z-layout'));
+        .pipe(gulp.dest('theLastDrop/z-layout'));
 });
 gulp.task('phpPushSvgs', function () {
     return gulp
@@ -126,11 +126,11 @@ gulp.task('phpPushSvgs', function () {
                 errorHandler: onError,
             })
         )
-        .pipe(gulp.dest('fyberV5/z-svgs'));
+        .pipe(gulp.dest('theLastDrop/z-svgs'));
 });
 
 gulp.task('imagePush', function () {
-    return gulp.src('app/images/**/*').pipe(gulp.dest('fyberV5/images'));
+    return gulp.src('app/images/**/*').pipe(gulp.dest('theLastDrop/images'));
 });
 
 //run functions on file save

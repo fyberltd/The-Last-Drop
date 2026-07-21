@@ -6,3 +6,362 @@ html {
 body {
     overflow-x: hidden;
 }
+
+
+.address-map-section {
+    background-color: #033421;
+    padding: 8rem 0;
+
+    .btn-outline-gold {
+        color: #EBE9DF;
+    }
+
+    .address-details {
+        padding-right: 2rem;
+
+        h5 {
+            font-family: 'Lexend';
+            font-size: clamp(1.73rem, 1.05vw + 1.31rem, 2.56rem);
+            font-weight: 300;
+            line-height: 1.2;
+            color: #ebe9df;
+            margin-bottom: 1.5rem;
+            letter-spacing: 20%;
+        }
+
+        .detail-label {
+            font-size: 1.8rem;
+            color: #B17C2B;
+            margin-bottom: 2rem;
+            letter-spacing: 0.3em;
+            font-weight: 300;
+        }
+
+        .address-lines {
+            margin-bottom: 3rem;
+
+            p {
+                font-size: 1.4rem;
+                line-height: 1.6;
+                margin-bottom: 1.5rem;
+                color: #ebe9df !important;
+            }
+
+        }
+
+        .btn-box {
+            a {
+                color: #ebe9df !important;
+            }
+        }
+    }
+
+    #map-container {
+        height: 500px;
+        width: 100%;
+        position: relative;
+        border-radius: 4px;
+        overflow: hidden;
+
+        #map {
+            height: 100%;
+            width: 100%;
+            background: #052C1B;
+
+            .leaflet-tile-pane {
+                filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(3, 52, 33, 0.4);
+                    z-index: 1000;
+                    pointer-events: none;
+                }
+            }
+
+            .leaflet-marker-pane {
+                z-index: 1100 !important;
+            }
+
+            .leaflet-control-attribution {
+                display: none !important;
+            }
+
+            .leaflet-bar {
+                border: 1px solid rgba(177, 124, 43, 0.3) !important;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4) !important;
+
+                a {
+                    background-color: #052C1B !important;
+                    color: #B17C2B !important;
+                    border-bottom: 1px solid rgba(177, 124, 43, 0.3) !important;
+
+                    &:hover {
+                        background-color: #033421 !important;
+                        color: #EBE9DF !important;
+                    }
+
+                    &:last-child {
+                        border-bottom: none !important;
+                    }
+                }
+            }
+        }
+
+        .custom-div-icon {
+            background: none;
+            border: none;
+
+            .marker-pin {
+                background: #052C1B;
+                padding: 12px 18px;
+                border-radius: 4px;
+                border: 1px solid rgba(177, 124, 43, 0.3);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+                position: relative;
+                // transform: translate(-50%, -100%);
+                width: 25%;
+                white-space: nowrap;
+                transform: translate(80px, -45px);
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    border-top: 10px solid #052C1B;
+                }
+
+                img {
+                    height: 35px;
+                    width: auto;
+                }
+
+                span {
+                    font-family: 'Lexend';
+                    color: #EBE9DF;
+                    font-weight: 300;
+                    letter-spacing: 0.1em;
+                    margin-left: 10px;
+                    font-size: 1.2rem;
+                }
+            }
+
+            &.poi-marker {
+                .marker-pin {
+                    background: #B17C2B;
+                    width: 12px;
+                    height: 12px;
+                    padding: 0;
+                    border-radius: 50%;
+                    border: 2px solid #EBE9DF;
+                    transform: translate(-50%, -50%);
+
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.opening-parking-section {
+    background-color: #033421;
+    padding: 8rem 0;
+
+    .btn-outline-gold {
+        color: #EBE9DF;
+    }
+
+    .section-subtitle {
+        font-size: 2.4rem;
+        color: #ebe9df;
+        margin-bottom: 3rem;
+        letter-spacing: 0.3em;
+        font-weight: 300;
+        font-family: 'Lexend';
+    }
+
+    .opening-hours {
+        padding-right: 4rem;
+
+        .hours-table {
+            width: 100% !important;
+            margin-bottom: 2rem !important;
+            border-collapse: collapse !important;
+            background: transparent !important;
+            border: none !important;
+
+            thead,
+            tbody,
+            tr,
+            th,
+            td {
+                background: transparent !important;
+                border: none !important;
+                box-shadow: none !important;
+            }
+
+            th,
+            td {
+                padding: 1.2rem 0 !important;
+                font-size: 1.4rem !important;
+                text-align: left !important;
+                color: #EBE9DF !important;
+                border-bottom: 1px solid rgb(177 124 43) !important;
+            }
+
+            th {
+                color: #ebe9df !important;
+                font-weight: 400 !important;
+                font-size: 1.6rem !important;
+                letter-spacing: 0.1em !important;
+                border-bottom: none !important;
+            }
+
+            td:nth-child(2),
+            td:nth-child(3),
+            th:nth-child(2),
+            th:nth-child(3) {
+                text-align: right !important;
+                width: 30% !important;
+            }
+
+            tr:last-child td {
+                border-bottom: none !important;
+            }
+        }
+
+        .bar-notice {
+            font-size: 1.4rem !important;
+            color: #EBE9DF !important;
+        }
+    }
+
+    .local-parking {
+        p {
+            font-size: 1.4rem;
+        }
+
+        .parking-intro {
+            font-size: 1.1rem !important;
+            line-height: 1.6 !important;
+            margin-bottom: 3rem !important;
+            opacity: 0.9 !important;
+            color: #EBE9DF !important;
+        }
+
+        .parking-item {
+            margin-bottom: 3rem !important;
+            padding-bottom: 3rem !important;
+            border-bottom: 1px solid #B17C2B !important;
+
+            &:last-child {
+                border-bottom: none !important;
+                margin-bottom: 0 !important;
+            }
+
+            .parking-name {
+                font-size: 1.6rem !important;
+                color: #EBE9DF !important;
+                margin-bottom: 1rem !important;
+                font-weight: 400 !important;
+                letter-spacing: 0.05em !important;
+                font-family: 'Lexend';
+            }
+
+            p {
+                font-size: 1.4rem !important;
+                line-height: 1.6 !important;
+                margin-bottom: 2rem !important;
+                opacity: 0.8 !important;
+                color: #EBE9DF !important;
+            }
+
+            .parking-btns {
+                display: flex !important;
+                gap: 1.5rem !important;
+                flex-wrap: wrap !important;
+
+                .btn {
+                    // padding: 0.6rem 2rem !important;
+                    // font-size: 1rem !important;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 540px) {
+
+    #contact_us_page {
+        .address-map-section {
+            padding: 0 3rem 8rem;
+        }
+
+        .contact-us-content {
+            padding: 5rem 4rem;
+        }
+
+        .form-section {
+            padding: 5rem 4rem;
+        }
+
+        .contact-cta {
+            padding: 5rem 4rem;
+        }
+    }
+
+    .address-map-section {
+        padding-bottom: 5rem;
+
+        .address-details {
+            margin-bottom: 3rem;
+        }
+
+        #map-container {
+            height: 400px;
+        }
+    }
+
+    .opening-parking-section {
+        padding: 4rem 3rem;
+
+        .opening-hours {
+            padding-right: 0;
+
+            .hours-table {
+
+                td:nth-child(2),
+                td:nth-child(3),
+                th:nth-child(2),
+                th:nth-child(3) {
+                    width: 60% !important;
+                }
+
+                th {
+                    padding: 2.4rem 0rem !important;
+                }
+            }
+        }
+    }
+
+    #checkout_page {
+        .basket-right-section {
+            padding: 5rem 2rem;
+        }
+    }
+}

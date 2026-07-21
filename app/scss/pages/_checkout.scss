@@ -1,0 +1,587 @@
+#checkout_page {
+    background: linear-gradient(to right, #EBE9DF 60%, #E3E1D5 40%);
+    margin-top: 76px;
+
+    /* Reset & utility colors */
+    .text-gold {
+        color: #B17C2B !important;
+    }
+
+    .bg-dark-green {
+        background-color: #033421 !important;
+    }
+
+    .border-top-gold {
+        border-top: 1px solid rgba(177, 124, 43, 0.3);
+    }
+
+    .checkout-left-section {
+        padding: 5rem 5rem 5rem 0;
+
+        .left-content {
+            .top {
+                background-color: #033421;
+                background-image: url('../images/website-identity/checkout-top-image.jpg');
+                background-position: right center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                padding: 2.5rem;
+                color: #fff;
+
+                .heading {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    margin-bottom: 1.5rem;
+                    max-width: 65%;
+
+                    label {
+                        font-family: 'lexend', sans-serif;
+                        font-size: 2.2rem;
+                        font-weight: 400;
+                        margin: 0;
+                        cursor: pointer;
+                        color: #fff;
+                    }
+
+                    input[type="checkbox"] {
+                        appearance: none;
+                        -webkit-appearance: none;
+                        width: 20px;
+                        height: 20px;
+                        background-color: transparent;
+                        border: 2px solid #B17C2B;
+                        border-radius: 6px;
+                        cursor: pointer;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        &:checked {
+                            background-color: #B17C2B;
+
+                            &::after {
+                                content: '';
+                                width: 7px;
+                                height: 13px;
+                                border: solid white;
+                                border-width: 0 2px 2px 0;
+                                transform: rotate(45deg);
+                                position: absolute;
+                                top: 3px;
+                            }
+                        }
+                    }
+                }
+
+                p {
+                    font-size: 1.6rem;
+                    margin: 0;
+                    max-width: 60%;
+                    color: #fff;
+                }
+            }
+
+            .form {
+                .checkout-form {
+                    margin-top: 4rem;
+
+                    .form-section {
+                        margin-bottom: 4rem;
+                    }
+
+                    .section-title {
+                        display: flex;
+                        align-items: center;
+                        gap: 1.5rem;
+                        margin-bottom: 2rem;
+
+                        .step-number {
+                            background-color: #B17C2B;
+                            color: #fff;
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 2rem;
+                            font-family: 'lexend', sans-serif;
+                        }
+
+                        h2 {
+                            color: #B17C2B;
+                            font-size: 2.8rem;
+                            margin: 0;
+                            font-family: 'lexend', sans-serif;
+                            font-weight: 400;
+                        }
+                    }
+
+                    .required-text {
+                        font-size: 1.2rem;
+                        color: #333;
+                        margin-bottom: 2rem;
+                    }
+
+                    .form-row {
+                        display: flex;
+                        gap: 2rem;
+
+                        @media (max-width: 768px) {
+                            flex-direction: column;
+                            gap: 0;
+                        }
+
+                        &.align-items-end {
+                            align-items: flex-end;
+                        }
+                    }
+
+                    .form-group {
+                        margin-bottom: 2rem;
+                        display: flex;
+                        flex-direction: column;
+
+                        &.full-width {
+                            width: 100%;
+                        }
+
+                        &.half-width {
+                            width: calc(50% - 1rem);
+
+                            @media (max-width: 768px) {
+                                width: 100%;
+                            }
+                        }
+
+                        &.quarter-width {
+                            width: calc(25% - 1.5rem);
+
+                            @media (max-width: 768px) {
+                                width: 100%;
+                            }
+                        }
+
+                        &.mb-0 {
+                            margin-bottom: 0;
+                        }
+
+                        label {
+                            font-size: 1.4rem;
+                            color: #333;
+                            margin-bottom: 0.8rem;
+                        }
+
+                        .section-label {
+                            font-size: 1.6rem;
+                            margin-top: 1rem;
+                        }
+
+                        input[type="text"],
+                        input[type="email"],
+                        input[type="tel"],
+                        select {
+                            width: 100%;
+                            padding: 1.5rem 2rem;
+                            border: 1px solid transparent;
+                            border-radius: 25px;
+                            background-color: #E2E0D4;
+                            font-size: 1.4rem;
+                            color: #333;
+                            transition: all 0.3s ease;
+                            font-family: 'lexend', sans-serif;
+
+                            &::placeholder {
+                                color: #999;
+                                font-family: 'lexend', sans-serif;
+                            }
+
+                            &:focus,
+                            &:active {
+                                outline: none;
+                                border-color: #B17C2B;
+
+                                &::placeholder {
+                                    color: #B17C2B;
+                                }
+                            }
+
+                            @include media-breakpoint-down(sm) {
+                                border-radius: 25px 0 0 25px;
+                            }
+                        }
+                    }
+
+                    .custom-select {
+                        position: relative;
+
+                        select {
+                            appearance: none;
+                            -webkit-appearance: none;
+                            cursor: pointer;
+                        }
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            right: 20px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 10px;
+                            height: 6px;
+                            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath fill='%23B17C2B' d='M5 6L0 0h10z'/%3E%3C/svg%3E");
+                            background-repeat: no-repeat;
+                            pointer-events: none;
+                        }
+                    }
+
+                    .manual-address-link {
+                        text-align: right;
+                        margin-top: 0.5rem;
+                        margin-bottom: 1.5rem;
+
+                        a {
+                            color: #B17C2B;
+                            font-size: 1.4rem;
+                            text-decoration: none;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+
+                    .expiry-group {
+                        .expiry-inputs {
+                            display: flex;
+                            align-items: center;
+                            gap: 1rem;
+
+                            input {
+                                text-align: center;
+                                padding-left: 1rem;
+                                padding-right: 1rem;
+                            }
+
+                            .separator {
+                                font-size: 1.8rem;
+                                color: #333;
+                            }
+                        }
+                    }
+
+                    .section-divider {
+                        border: 0;
+                        border-top: 1px solid #B17C2B;
+                        margin: 4rem 0;
+                        opacity: 0.5;
+                    }
+
+                    .radio-container {
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        cursor: pointer;
+                        font-size: 1.8rem;
+                        font-weight: 500;
+                        color: #333;
+                        user-select: none;
+                        gap: 15px;
+
+                        input {
+                            position: absolute;
+                            opacity: 0;
+                            cursor: pointer;
+                        }
+
+                        .radio-checkmark {
+                            height: 20px;
+                            width: 20px;
+                            background-color: #E2E0D4;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            &::after {
+                                content: "";
+                                display: none;
+                                width: 10px;
+                                height: 10px;
+                                border-radius: 50%;
+                                background: #B17C2B;
+                            }
+                        }
+
+                        input:checked~.radio-checkmark::after {
+                            display: block;
+                        }
+                    }
+
+                    .payment-details {
+                        margin-top: 2rem;
+                        margin-left: 3.5rem;
+                    }
+
+                    .checkbox-container {
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        cursor: pointer;
+                        font-size: 1.4rem;
+                        color: #333;
+                        user-select: none;
+                        gap: 15px;
+
+                        input {
+                            position: absolute;
+                            opacity: 0;
+                            cursor: pointer;
+                        }
+
+                        .checkmark {
+                            height: 24px;
+                            width: 24px;
+                            background-color: #B17C2B;
+                            border-radius: 4px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            &::after {
+                                content: "";
+                                display: none;
+                                width: 5px;
+                                height: 10px;
+                                border: solid white;
+                                border-width: 0 2px 2px 0;
+                                transform: rotate(45deg);
+                                margin-bottom: 2px;
+                            }
+                        }
+
+                        input:checked~.checkmark::after {
+                            display: block;
+                        }
+
+                        a {
+                            color: #B17C2B;
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .btn-place-order,
+                    .btn-paypal {
+                        width: 100%;
+                        padding: 1.5rem;
+                        border-radius: 25px;
+                        border: none;
+                        font-size: 1.8rem;
+                        font-family: 'lexend', sans-serif;
+                        cursor: pointer;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: opacity 0.3s;
+
+                        &:hover {
+                            opacity: 0.9;
+                        }
+                    }
+
+                    .btn-place-order {
+                        background-color: #B17C2B;
+                        color: #fff;
+                    }
+
+                    .btn-paypal {
+                        background-color: #F6C657;
+
+                        img {
+                            height: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .basket-right-section {
+        background-color: #E3E1D5;
+        padding: 5rem 0 5rem 10rem;
+
+        .basket-right-content {
+            .summary-top {
+                .discount-link {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+
+    /* Right Side Elements */
+    .summary-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.25rem;
+        font-size: 1.4rem;
+        color: #333;
+
+        &.savings-row {
+            color: #B17C2B;
+        }
+
+        span {
+            font-family: 'lexend';
+        }
+    }
+
+    .coupon-tag {
+        display: flex;
+        align-items: center;
+
+        .coupon-code {
+            font-family: 'lexend';
+            background-color: #B17C2B40;
+            border-radius: 20px;
+            padding: 10px;
+            margin-right: 5px;
+            font-weight: 300;
+            font-size: 1.4rem;
+        }
+
+        .btn-remove-coupon {
+            background-color: #B17C2B;
+            border: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            padding: unset;
+
+            img {
+                width: 8px;
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+
+    .summary-divider {
+        border-color: #B17C2B;
+        opacity: 0.4;
+        margin: 2rem 0;
+    }
+
+    .summary-total-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2.5rem;
+
+        .total-label {
+            font-size: 3.2rem;
+            color: #333;
+            font-family: 'lexend';
+        }
+
+        .total-val {
+            font-size: 3.2rem;
+            color: #333;
+            font-family: 'lexend';
+        }
+    }
+
+    .btn.btn-gold {
+        width: 100%;
+        margin-bottom: 1.5rem;
+
+        &:hover {
+            color: #000000;
+            border: 1px solid #000000;
+        }
+    }
+
+    .help-box {
+        background-color: #EBE9DF;
+        padding: 30px;
+        text-align: center;
+
+        .help-title {
+            color: #333;
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        .help-desc {
+            text-align: left;
+            color: #555;
+            font-size: 1.4rem;
+            line-height: 1.6;
+        }
+    }
+
+}
+
+/* Header Adjustments for Basket Page */
+.basket-nav {
+    ul li a {
+        color: #000 !important;
+
+        &:hover {
+            color: #B17C2B !important;
+        }
+    }
+}
+
+
+@media screen and (max-width: 540px) {
+    #checkout_page {
+        background: linear-gradient(to right, #ebe9df 90%, #e3e1d5 10%);
+
+        .checkout-left-section {
+            padding: 5rem 2rem;
+
+            .left-content {
+                .top {
+                    background-position: center;
+                    background-size: cover;
+                    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/website-identity/checkout-top-image.jpg');
+
+                    .heading {
+                        max-width: 100%;
+                    }
+
+                    p {
+                        max-width: 100%;
+                    }
+                }
+
+                .form {
+                    .checkout-form {
+                        .manual-address-link {
+                            text-align: left;
+                        }
+
+                        .payment-details {
+                            margin-left: 0rem;
+                        }
+
+                        .checkbox-container {
+                            gap: 1rem;
+
+                            .checkmark {
+                                height: 16px;
+                                width: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

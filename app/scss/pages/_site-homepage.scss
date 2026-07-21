@@ -1,0 +1,380 @@
+// Hero Section Styles
+.site-hero {
+    position: relative;
+    height: calc(100vh - 53px);
+    min-height: 700px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .hero-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -2;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4); // Subtle dark overlay for readability
+        z-index: -1;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        margin-top: -5rem;
+        // padding-top: 100px; // Space for the header overlay
+
+        .hero-title {
+            font-family: "laima", serif;
+            font-size: clamp(4rem, 7vw, 9rem);
+            margin-bottom: 5rem;
+            line-height: 1;
+            color: #EBE9DF;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+
+            @include media-breakpoint-down(sm) {
+                flex-direction: column;
+                align-items: center;
+                gap: 1.5rem;
+            }
+
+            .btn {
+                min-width: 180px;
+                padding: 0.7rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.8rem;
+            }
+        }
+    }
+}
+
+// Global overrides for this template
+body.page-template-site-homepage {
+    .header-spacing {
+        display: none !important;
+    }
+
+    .section-subtitle {
+        display: block;
+        font-family: "lexend", sans-serif;
+        font-size: 2.4rem;
+        font-weight: 300;
+        letter-spacing: 0.2rem;
+        color: #26241A;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 20%;
+    }
+
+    p {
+        font-family: "lexend", sans-serif;
+        font-size: 1.4rem;
+        line-height: 1.7;
+        color: #26241A;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 1.8rem;
+            line-height: 1.4;
+        }
+    }
+
+    .section-title {
+        font-family: "laima", serif;
+        font-size: clamp(3rem, 6vw, 6rem);
+        color: #B17C2B;
+        line-height: 1;
+        margin-bottom: 4rem;
+    }
+
+    #home-intro {
+        background-color: #EBE9DF;
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+
+        .set-container {
+            // max-width: 1440px;
+            // margin: 0 auto;
+        }
+
+        .top-section {
+            padding-top: 15rem;
+            position: relative;
+
+            .left-artboard {
+                position: absolute;
+                left: 0;
+                width: 70%;
+                top: 0;
+            }
+
+            .right-artboard {
+                position: absolute;
+                right: 0;
+                width: 50%;
+                top: 0;
+            }
+
+            .image-div {
+                position: relative;
+                width: 30%;
+
+                img {
+                    width: 100%;
+                    animation: spin 20s linear infinite;
+                }
+            }
+
+            .subtitle-wrap {
+                max-width: 50%;
+                margin: 0 auto;
+                text-align: center;
+                z-index: 1;
+                position: relative;
+            }
+        }
+
+        .btn-outline-gold {
+            border: 1px solid #B17C2B;
+            color: #B17C2B;
+            padding: 1.2rem 3.5rem;
+            border-radius: 50px;
+            font-family: "lexend", sans-serif;
+            font-size: 1.4rem;
+            text-transform: capitalize;
+            transition: all 0.3s ease;
+            background: transparent;
+            margin-top: 2rem;
+            color: #26241A;
+
+            &:hover {
+                background-color: #B17C2B;
+                color: #fff;
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(177, 124, 43, 0.2);
+            }
+        }
+
+        .bottom-section {
+            // position: relative;
+            // background-image: url('https://thelastdropcobh.com/wp-content/uploads/2026/03/food.webp');
+            // background-repeat: no-repeat;
+            // background-position: right -160px top -80px;
+            // background-size: 700px auto;
+            // padding: 12rem 0;
+
+            position: relative;
+            overflow: hidden;
+            padding: 12rem 0;
+
+            .data {
+                max-width: 600px;
+
+                p {
+                    a {
+                        font-size: 1.4rem;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: #B17C2B;
+                        }
+                    }
+                }
+            }
+        }
+
+        .bottom-section::after {
+            content: "";
+            position: absolute;
+            top: -120px;
+            right: -160px;
+
+            width: 700px;
+            height: 700px;
+
+            background-image: url('https://thelastdropcobh.com/wp-content/uploads/2026/03/food.webp');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+
+            /* 🔥 Initial state (off screen) */
+            transform: translateX(120%) rotate(300deg);
+            opacity: 0;
+
+            transition: transform 1.6s ease-out, opacity 1.6s ease-out;
+            pointer-events: none;
+        }
+
+        .bottom-section.show::after {
+            transform: translateX(0) rotate(0deg);
+            opacity: 1;
+        }
+
+        @include media-breakpoint-down(md) {
+            padding: 80px 0;
+
+            .section-title {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    .voucher-section {
+        padding: 12rem 0;
+        background-color: #E3E1D5;
+
+        .col-lg-6 {
+            padding: 0 5rem;
+            display: flex;
+            align-items: center;
+
+            img {
+                // filter: drop-shadow(0px 100px 50px rgba(88, 79, 64, 0.2));
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            a {
+                color: #B17C2B;
+                text-decoration: none;
+                font-size: 16px;
+            }
+        }
+
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes plateEnter {
+    from {
+        transform: translateX(100%) rotate(180deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 540px) {
+
+    .site-hero {
+        height: 550px;
+        min-height: unset;
+    }
+
+    body.page-template-site-homepage {
+
+        .section-title {
+            font-size: 5rem;
+        }
+
+
+        #home-intro {
+            padding: 50px 0;
+
+            .section-title {
+                font-size: 5rem;
+            }
+
+            .top-section {
+                padding-top: 3rem;
+                padding-bottom: 5rem;
+
+                .image-div {
+                    display: none;
+                }
+
+                .left-artboard {
+                    height: 50%;
+                }
+
+                .right-artboard {
+                    width: 50%;
+                    height: 40%;
+                }
+
+                .subtitle-wrap {
+                    max-width: 85%;
+                }
+            }
+
+            .bottom-section {
+                padding: 0;
+
+                &::after {
+                    display: none;
+                }
+
+                .data {
+                    padding-bottom: 0rem;
+
+                    .section-subtitle {
+                        text-align: center;
+                    }
+
+                    .section-text {
+                        text-align: center;
+                        max-width: 85%;
+                        margin: 0 auto;
+                    }
+
+                    .btn-wrap {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .voucher-section {
+            padding: 6rem 0;
+
+            .col-lg-6 {
+                padding: 2rem 1.5rem;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .voucher-data {
+                max-width: 90%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
