@@ -8,7 +8,9 @@
 
 @font-face {
     font-family: Matthew-Regular;
-    src: url(http://valentis22-com.stackstaging.com/wp-content/themes/Valentis-Advisory-22/fonts/FSMatthew-Regular.otf);
+    // src: url(http://valentis22-com.stackstaging.com/wp-content/themes/Valentis-Advisory-22/fonts/FSMatthew-Regular.otf);
+    src: url('<?php echo get_template_directory_uri(); ?>/fonts/FSMatthew-Regular.otf');
+
 }
 
 // To use it:
