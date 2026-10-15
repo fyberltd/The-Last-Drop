@@ -68,16 +68,16 @@
                     <div class="festive-card-top">
                         <div class="festive-card-icon" aria-hidden="true">
                             <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="23" cy="23" r="14" stroke="#C89B4F" stroke-width="1.5"/>
-                                <circle cx="23" cy="23" r="10" stroke="#C89B4F" stroke-width="1" stroke-dasharray="2.5 2.5"/>
+                                <circle cx="23" cy="23" r="14" stroke="#FFFFFF" stroke-width="1.5"/>
+                                <circle cx="23" cy="23" r="10" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="2.5 2.5"/>
                                 <!-- Fork -->
-                                <path d="M5 15V21C5 23.5 7 25.5 9.5 25.5V35" stroke="#C89B4F" stroke-width="1.5" stroke-linecap="round"/>
-                                <path d="M7 15V23" stroke="#C89B4F" stroke-width="1.5" stroke-linecap="round"/>
-                                <path d="M9.5 15V23" stroke="#C89B4F" stroke-width="1.5" stroke-linecap="round"/>
-                                <path d="M12 15V21C12 23.5 10 25.5 9.5 25.5" stroke="#C89B4F" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M5 15V21C5 23.5 7 25.5 9.5 25.5V35" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M7 15V23" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M9.5 15V23" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M12 15V21C12 23.5 10 25.5 9.5 25.5" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
                                 <!-- Knife -->
-                                <path d="M39 15C41.5 17.5 41.5 23 38.5 25.5V35" stroke="#C89B4F" stroke-width="1.5" stroke-linecap="round"/>
-                                <path d="M38.5 15V25.5" stroke="#C89B4F" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M39 15C41.5 17.5 41.5 23 38.5 25.5V35" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M38.5 15V25.5" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
                             </svg>
                         </div>
                         <h3 class="festive-card-title">CHRISTMAS &Agrave; LA CARTE</h3>
@@ -87,7 +87,7 @@
                         </div>
                     </div>
                     <div class="festive-card-bottom">
-                        <a href="https://thelastdropcobh.com/menu/" class="btn btn-festive-gold">View the Menu</a>
+                        <a href="https://thelastdropcobh.com/wp-content/uploads/2026/10/The-Last-Drop-Christmas-Menu-1.pdf" class="btn btn-festive-gold">View the Menu</a>
                     </div>
                 </div>
             </div>
@@ -98,12 +98,12 @@
                     <div class="festive-card-top">
                         <div class="festive-card-icon" aria-hidden="true">
                             <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="23" cy="15" r="8" stroke="#C89B4F" stroke-width="1.5"/>
-                                <circle cx="23" cy="15" r="4.5" stroke="#C89B4F" stroke-width="1"/>
-                                <circle cx="15" cy="29" r="7" stroke="#C89B4F" stroke-width="1.5"/>
-                                <circle cx="15" cy="29" r="3.5" stroke="#C89B4F" stroke-width="1"/>
-                                <circle cx="31" cy="30" r="6" stroke="#C89B4F" stroke-width="1.5"/>
-                                <circle cx="31" cy="30" r="3" stroke="#C89B4F" stroke-width="1"/>
+                                <circle cx="23" cy="15" r="8" stroke="#FFFFFF" stroke-width="1.5"/>
+                                <circle cx="23" cy="15" r="4.5" stroke="#FFFFFF" stroke-width="1"/>
+                                <circle cx="15" cy="29" r="7" stroke="#FFFFFF" stroke-width="1.5"/>
+                                <circle cx="15" cy="29" r="3.5" stroke="#FFFFFF" stroke-width="1"/>
+                                <circle cx="31" cy="30" r="6" stroke="#FFFFFF" stroke-width="1.5"/>
+                                <circle cx="31" cy="30" r="3" stroke="#FFFFFF" stroke-width="1"/>
                             </svg>
                         </div>
                         <h3 class="festive-card-title">3 COURSE<br>CHRISTMAS SET MENU</h3>
@@ -115,7 +115,7 @@
                         </div>
                     </div>
                     <div class="festive-card-bottom">
-                        <a href="https://thelastdropcobh.com/contact-us/" class="btn btn-festive-gold">Enquire About Group Bookings</a>
+                        <a href="https://thelastdropcobh.com/wp-content/uploads/2026/10/The-Last-Drop-Christmas-Set-Menu-E50.pdf" class="btn btn-festive-gold">Enquire About Group Bookings</a>
                     </div>
                 </div>
             </div>
@@ -127,14 +127,14 @@
                         <div class="festive-card-icon" aria-hidden="true">
                             <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <!-- Bottle -->
-                                <path d="M22 9H24V13L26 17V35H20V17L22 13V9Z" stroke="#C89B4F" stroke-width="1.5" stroke-linejoin="round"/>
-                                <line x1="21.5" y1="11" x2="24.5" y2="11" stroke="#C89B4F" stroke-width="1.5"/>
+                                <path d="M22 9H24V13L26 17V35H20V17L22 13V9Z" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round"/>
+                                <line x1="21.5" y1="11" x2="24.5" y2="11" stroke="#FFFFFF" stroke-width="1.5"/>
                                 <!-- Left Glass -->
-                                <path d="M12 18C12 22 14 24 15 24V32M13 32H17" stroke="#C89B4F" stroke-width="1.5" stroke-linecap="round"/>
-                                <line x1="11" y1="18" x2="16" y2="18" stroke="#C89B4F" stroke-width="1.5"/>
+                                <path d="M12 18C12 22 14 24 15 24V32M13 32H17" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+                                <line x1="11" y1="18" x2="16" y2="18" stroke="#FFFFFF" stroke-width="1.5"/>
                                 <!-- Right Glass -->
-                                <path d="M34 18C34 22 32 24 31 24V32M29 32H33" stroke="#C89B4F" stroke-width="1.5" stroke-linecap="round"/>
-                                <line x1="30" y1="18" x2="35" y2="18" stroke="#C89B4F" stroke-width="1.5"/>
+                                <path d="M34 18C34 22 32 24 31 24V32M29 32H33" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+                                <line x1="30" y1="18" x2="35" y2="18" stroke="#FFFFFF" stroke-width="1.5"/>
                             </svg>
                         </div>
                         <h3 class="festive-card-title">FROM THE FIRST DROP<br>TO THE LAST</h3>
@@ -145,7 +145,7 @@
                         </div>
                     </div>
                     <div class="festive-card-bottom">
-                        <a href="https://thelastdropcobh.com/contact-us/" class="btn btn-festive-gold">Enquire About Group Bookings</a>
+                        <a href="https://thelastdropcobh.com/wp-content/uploads/2026/10/FD-to-LD-Christmas-Package-Flyer.pdf" class="btn btn-festive-gold">Enquire About Group Bookings</a>
                     </div>
                 </div>
             </div>

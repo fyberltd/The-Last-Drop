@@ -41,7 +41,7 @@
 
         .festive-title {
             font-family: "laima", serif;
-            color: #C89B4F;
+            color: #B17C2B;
             line-height: 1.15;
             margin-bottom: 2.2rem;
             text-align: center;
@@ -50,7 +50,7 @@
                 display: block;
                 font-size: clamp(2.4rem, 3.2vw, 4.2rem);
                 font-weight: 400;
-                color: #C89B4F;
+                color: #B17C2B;
                 margin-bottom: 0.5rem;
             }
 
@@ -58,7 +58,7 @@
                 display: block;
                 font-size: clamp(3.6rem, 5.2vw, 6.6rem);
                 font-weight: 400;
-                color: #C89B4F;
+                color: #B17C2B;
                 letter-spacing: -0.01em;
             }
         }
@@ -88,12 +88,13 @@
         .festive-badge {
             display: inline-block;
             font-family: 'Lexend', sans-serif;
-            font-size: clamp(1.3rem, 1.1vw, 1.55rem);
-            letter-spacing: 0.24em;
+            font-size: clamp(1.6rem, 1.35vw, 2.05rem) !important;
+            letter-spacing: 0.22em;
             text-transform: uppercase;
-            color: #EBE9DF;
+            color: #EBE9DF !important;
             font-weight: 400;
             text-align: center;
+            line-height: 1.4;
         }
     }
 
@@ -111,7 +112,7 @@
         background: rgba(2, 36, 23, 0.92);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
-        border: 1px solid rgba(200, 155, 79, 0.2);
+        border: 1px solid rgba(177, 124, 43, 0.2);
         border-radius: 14px;
         padding: 4.2rem 2.8rem 3.5rem;
         text-align: center;
@@ -123,7 +124,7 @@
 
         &:hover {
             transform: translateY(-6px);
-            border-color: rgba(200, 155, 79, 0.45);
+            border-color: rgba(177, 124, 43, 0.45);
             box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
         }
 
@@ -153,6 +154,15 @@
                 width: 48px;
                 height: 48px;
                 transition: transform 0.3s ease;
+                stroke: #ffffff !important;
+
+                circle,
+                path,
+                line,
+                rect,
+                polygon {
+                    stroke: #ffffff !important;
+                }
             }
         }
 
@@ -162,11 +172,11 @@
 
         .festive-card-title {
             font-family: 'Lexend', sans-serif;
-            font-size: 1.65rem;
-            font-weight: 600;
+            font-size: 1.69rem;
+            font-weight: 400;
             letter-spacing: 0.12em;
             text-transform: uppercase;
-            color: #EBE9DF;
+            color: #EBE9DF !important;
             margin-bottom: 1.2rem;
             line-height: 1.35;
             min-height: 44px;
@@ -184,7 +194,7 @@
             font-family: 'Lexend', sans-serif;
             font-size: 1.35rem;
             font-weight: 300;
-            color: #C89B4F;
+            color: #B17C2B;
             margin-bottom: 2.2rem;
             line-height: 1.45;
             min-height: 38px;
@@ -286,7 +296,7 @@
         .festive-booking-title {
             font-family: "laima", serif;
             font-size: clamp(3rem, 4.4vw, 5.2rem);
-            color: #C89B4F;
+            color: #B17C2B;
             line-height: 1.2;
             margin-bottom: 2rem;
             font-weight: 400;

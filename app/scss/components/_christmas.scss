@@ -15,6 +15,73 @@
         z-index: 5;
     }
 
+    // Top Header & Badge ("WHAT'S ON THIS FESTIVE SEASON") Styles
+    .festive-header {
+        .festive-title,
+        .festive-title .festive-title-small,
+        .festive-title .festive-title-large {
+            color: #B17C2B !important;
+        }
+
+        .festive-badge-wrap {
+            display: flex;
+            justify-content: center;
+        }
+
+        .festive-badge {
+            display: inline-block;
+            font-family: 'Lexend', sans-serif;
+            font-size: clamp(1.6rem, 1.35vw, 2.05rem) !important;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: #EBE9DF !important;
+            font-weight: 400;
+            text-align: center;
+            line-height: 1.4;
+        }
+    }
+
+    // Force white strokes on card icons
+    .festive-card-icon {
+        svg {
+            stroke: #ffffff !important;
+
+            circle,
+            path,
+            line,
+            rect,
+            polygon {
+                stroke: #ffffff !important;
+            }
+        }
+    }
+
+    // Card Typography & Colors
+    .festive-card {
+        .festive-card-title {
+            font-family: 'Lexend', sans-serif;
+            font-size: 1.69rem;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #EBE9DF !important;
+        }
+
+        .festive-card-subtitle {
+            font-family: 'Lexend', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 300;
+            color: #B17C2B;
+        }
+    }
+
+    // Bottom Booking Banner
+    .festive-booking-banner {
+        .festive-booking-title {
+            color: #B17C2B !important;
+        }
+    }
+
     // Top Background Video
     .christmas-video-wrap {
         position: absolute;
@@ -187,7 +254,7 @@
             z-index: 1;
             transform: rotate(-110deg);
             opacity: 0.95;
-            filter: drop-shadow(0 0 12px rgba(200, 155, 79, 0.45));
+            filter: drop-shadow(0 0 12px rgba(177, 124, 43, 0.45));
 
             @include media-breakpoint-down(md) {
                 display: none;
@@ -258,7 +325,7 @@
             width: clamp(220px, 21vw, 370px);
             opacity: 0.92;
             z-index: 2;
-            filter: drop-shadow(0 0 14px rgba(200, 155, 79, 0.5));
+            filter: drop-shadow(0 0 14px rgba(177, 124, 43, 0.5));
             animation: christmasTwinkle 5s ease-in-out infinite 1.2s;
 
             @include media-breakpoint-down(md) {
