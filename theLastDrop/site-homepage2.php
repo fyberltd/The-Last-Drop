@@ -36,7 +36,9 @@ get_header(); ?>
         </div>
     </section>
     
-    <?php get_template_part('z-components/festive-season'); ?>
+    <!-- <?php get_template_part('z-components/festive-season'); ?> -->
+    <?php get_template_part('z-components/christmas'); ?>
+
 
     <section id="home-intro">
         <div class="set-container">
