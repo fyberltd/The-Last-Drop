@@ -18,8 +18,8 @@ add_action('wp_enqueue_scripts', 'update_jQuery');
 function custom_js_css()
 {
 
-    wp_enqueue_script('all_js', get_template_directory_uri() . '/js/all.min.js?v=1789970189306', 'jquery', null, true);
-    wp_enqueue_style('all_css', get_template_directory_uri() . '/css/main.min.css?v=1789970189306');
+    wp_enqueue_script('all_js', get_template_directory_uri() . '/js/all.min.js?v=1791957036233', 'jquery', null, true);
+    wp_enqueue_style('all_css', get_template_directory_uri() . '/css/main.min.css?v=1791957036233');
     wp_localize_script('all_js', 'ajax_url', array(admin_url('admin-ajax.php')));
 
     if (is_page_template('gallery.php')) {

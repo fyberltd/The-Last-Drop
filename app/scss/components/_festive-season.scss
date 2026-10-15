@@ -1,0 +1,326 @@
+.festive-season-section {
+    position: relative;
+    background-color: #033421;
+    background-image: url('https://thelastdropcobh.com/wp-content/uploads/2026/10/Frame-6131-2.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    padding: 10rem 0 12rem;
+    overflow: hidden;
+    color: #EBE9DF;
+
+    @media (min-width: 1200px) {
+        background-size: 100% 100%;
+        background-position: center center;
+    }
+
+    @include media-breakpoint-down(lg) {
+        padding: 8rem 0 9rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding: 5rem 0 6rem;
+        background-size: cover;
+        background-position: center top;
+    }
+
+    .festive-container {
+        position: relative;
+        z-index: 2;
+        max-width: 1260px;
+    }
+
+    // Top Header Styles
+    .festive-header {
+        margin-bottom: 5rem;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 3.5rem;
+        }
+
+        .festive-title {
+            font-family: "laima", serif;
+            color: #C89B4F;
+            line-height: 1.15;
+            margin-bottom: 2.2rem;
+            text-align: center;
+
+            .festive-title-small {
+                display: block;
+                font-size: clamp(2.4rem, 3.2vw, 4.2rem);
+                font-weight: 400;
+                color: #C89B4F;
+                margin-bottom: 0.5rem;
+            }
+
+            .festive-title-large {
+                display: block;
+                font-size: clamp(3.6rem, 5.2vw, 6.6rem);
+                font-weight: 400;
+                color: #C89B4F;
+                letter-spacing: -0.01em;
+            }
+        }
+
+        .festive-description {
+            font-family: 'Lexend', sans-serif;
+            font-size: clamp(1.4rem, 1.15vw, 1.6rem);
+            line-height: 1.75;
+            color: #EBE9DF;
+            font-weight: 300;
+            max-width: 780px;
+            margin: 0 auto 3.5rem;
+            text-align: center;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 1.45rem;
+                line-height: 1.65;
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        .festive-badge-wrap {
+            display: flex;
+            justify-content: center;
+        }
+
+        .festive-badge {
+            display: inline-block;
+            font-family: 'Lexend', sans-serif;
+            font-size: clamp(1.3rem, 1.1vw, 1.55rem);
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            color: #EBE9DF;
+            font-weight: 400;
+            text-align: center;
+        }
+    }
+
+    // Cards Row Styles
+    .festive-cards-row {
+        margin-bottom: 5rem;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    // Individual Card
+    .festive-card {
+        background: rgba(2, 36, 23, 0.92);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(200, 155, 79, 0.2);
+        border-radius: 14px;
+        padding: 4.2rem 2.8rem 3.5rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+
+        &:hover {
+            transform: translateY(-6px);
+            border-color: rgba(200, 155, 79, 0.45);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+        }
+
+        @include media-breakpoint-down(lg) {
+            padding: 3.5rem 2.2rem 3rem;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: 3rem 1.8rem 2.5rem;
+        }
+
+        .festive-card-top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .festive-card-icon {
+            margin-bottom: 2.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 52px;
+
+            svg {
+                display: block;
+                width: 48px;
+                height: 48px;
+                transition: transform 0.3s ease;
+            }
+        }
+
+        &:hover .festive-card-icon svg {
+            transform: scale(1.08);
+        }
+
+        .festive-card-title {
+            font-family: 'Lexend', sans-serif;
+            font-size: 1.65rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #EBE9DF;
+            margin-bottom: 1.2rem;
+            line-height: 1.35;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 1.55rem;
+                min-height: unset;
+            }
+        }
+
+        .festive-card-subtitle {
+            font-family: 'Lexend', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 300;
+            color: #C89B4F;
+            margin-bottom: 2.2rem;
+            line-height: 1.45;
+            min-height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 1.3rem;
+                min-height: unset;
+                margin-bottom: 1.8rem;
+            }
+        }
+
+        .festive-card-text {
+            font-family: 'Lexend', sans-serif;
+            font-size: 1.33rem;
+            line-height: 1.68;
+            color: #d8d6ce;
+            font-weight: 300;
+            margin-bottom: 2.8rem;
+            text-align: center;
+
+            p {
+                font-family: 'Lexend', sans-serif;
+                font-size: 1.33rem;
+                line-height: 1.68;
+                color: #d8d6ce;
+                font-weight: 300;
+                margin-bottom: 1.5rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            strong {
+                color: #EBE9DF;
+                font-weight: 600;
+            }
+
+            .festive-price {
+                font-weight: 600;
+                color: #EBE9DF;
+                font-size: 1.35rem;
+                margin-top: 1.6rem;
+                line-height: 1.5;
+            }
+        }
+
+        .festive-card-bottom {
+            margin-top: auto;
+            padding-top: 1rem;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    // Gold Pill Buttons
+    .btn-festive-gold {
+        background-color: #B17C2B;
+        color: #ffffff !important;
+        font-family: 'Lexend', sans-serif;
+        font-size: 1.32rem;
+        font-weight: 500;
+        letter-spacing: 0.03em;
+        padding: 1.15rem 2.6rem;
+        border-radius: 50px;
+        border: 1px solid #B17C2B;
+        text-decoration: none !important;
+        display: inline-block;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(177, 124, 43, 0.25);
+        cursor: pointer;
+
+        &:hover {
+            background-color: #c98e32;
+            border-color: #c98e32;
+            color: #ffffff !important;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 22px rgba(177, 124, 43, 0.45);
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: 1rem 2.2rem;
+            font-size: 1.25rem;
+        }
+    }
+
+    // Bottom Booking Banner
+    .festive-booking-banner {
+        margin-top: 5rem;
+        padding-top: 2rem;
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 3.5rem;
+        }
+
+        .festive-booking-title {
+            font-family: "laima", serif;
+            font-size: clamp(3rem, 4.4vw, 5.2rem);
+            color: #C89B4F;
+            line-height: 1.2;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .festive-booking-text {
+            font-family: 'Lexend', sans-serif;
+            font-size: clamp(1.4rem, 1.1vw, 1.55rem);
+            line-height: 1.7;
+            color: #EBE9DF;
+            font-weight: 300;
+            max-width: 680px;
+            margin: 0 auto 3rem;
+            text-align: center;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 1.4rem;
+                margin-bottom: 2.2rem;
+            }
+        }
+
+        .festive-booking-btn-wrap {
+            display: flex;
+            justify-content: center;
+
+            .btn-festive-gold {
+                padding: 1.25rem 3.8rem;
+                font-size: 1.45rem;
+
+                @include media-breakpoint-down(sm) {
+                    padding: 1.1rem 3rem;
+                    font-size: 1.35rem;
+                }
+            }
+        }
+    }
+}

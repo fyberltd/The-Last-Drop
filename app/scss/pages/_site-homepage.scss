@@ -72,7 +72,8 @@
 }
 
 // Global overrides for this template
-body.page-template-site-homepage {
+body.page-template-site-homepage,
+body.page-template-site-homepage2 {
     .header-spacing {
         display: none !important;
     }
@@ -297,7 +298,8 @@ body.page-template-site-homepage {
         min-height: unset;
     }
 
-    body.page-template-site-homepage {
+    body.page-template-site-homepage,
+    body.page-template-site-homepage2 {
 
         .section-title {
             font-size: 5rem;
